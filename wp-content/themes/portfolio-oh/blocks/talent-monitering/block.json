@@ -1,0 +1,24 @@
+{
+	"name": "acf/talent-monitering",
+	"title": "Talent Monitoring",
+	"description": "A custom Talent Monitoring block.",
+	"category": "theme-blocks",
+	"icon": "iat",
+	"keywords": ["talent-monitering"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "block-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}
