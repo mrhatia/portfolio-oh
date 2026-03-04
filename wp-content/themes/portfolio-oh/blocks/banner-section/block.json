@@ -1,0 +1,24 @@
+{
+	"name": "acf/banner-section",
+	"title": "Banner Section",
+	"description": "A custom Banner Section block.",
+	"category": "theme-blocks",
+	"icon": "iat",
+	"keywords": ["banner-section"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "banner-section-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

@@ -1,0 +1,24 @@
+{
+	"name": "acf/student-perks",
+	"title": "Student Perks",
+	"description": "A custom Student Perks block.",
+	"category": "theme-blocks",
+	"icon": "iat",
+	"keywords": ["student-perks"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "student-perks-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}
