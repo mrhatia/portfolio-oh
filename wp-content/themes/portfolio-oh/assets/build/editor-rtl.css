@@ -3079,6 +3079,24 @@ Mixin for transition
 .acf-block-preview .image-at-right .iat-image {
   order: 2;
 }
+.acf-block-preview .default-variation .iat-section {
+  background-color: var(--gb_gray_2);
+  border-radius: 20px;
+}
+.acf-block-preview .default-variation .iat-image {
+  width: 55.3%;
+}
+.acf-block-preview .default-variation .iat-text {
+  width: 38.9%;
+  padding-left: 15px;
+  box-sizing: border-box;
+  margin-top: -36px;
+}
+.acf-block-preview .default-variation .iat-text .heading-1 {
+  letter-spacing: -1.8px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
 .acf-block-preview .student-perks-section .section-head {
   max-width: 709px;
 }
@@ -3086,6 +3104,7 @@ Mixin for transition
   letter-spacing: -1.7px;
   line-height: 1.2;
   margin-bottom: 14px;
+  font-weight: 500;
 }
 .acf-block-preview .student-perks-section .section-head p:last-of-type {
   margin: 0;

@@ -75,7 +75,7 @@ BaseTheme::block(
 		<?php } else{ ?>
 			<section class="default-variation">
 				<div class="wrapper">
-					<div class="iat-section two-columns justify-content-between align-items-center <?php echo $bst_var_blk_mat_img_location; ?>">
+					<div class="iat-section d-flex justify-content-between align-items-center flex-wrap <?php echo $bst_var_blk_mat_img_location; ?>">
 						<div class="iat-image column" tabindex="0" role="img" aria-label="Image illustrating the content of this block">
 							<?php if ( $bst_var_blk_mat_image ) { ?>
 								<?php BaseTheme::the_attachment_image( $bst_var_blk_mat_image, 1000 ); ?>
@@ -83,7 +83,7 @@ BaseTheme::block(
 						</div>
 						<div class="iat-text column">
 							<?php if ( $bst_var_blk_mat_title ) { ?>
-								<h2>
+								<h2 class="heading-1">
 									<?php echo html_entity_decode( $bst_var_blk_mat_title ); ?>
 								</h2>
 							<?php } ?>

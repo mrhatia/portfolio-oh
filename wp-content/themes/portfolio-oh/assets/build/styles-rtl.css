@@ -5058,6 +5058,25 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   order: 2;
 }
 
+.default-variation .iat-section {
+  background-color: var(--gb_gray_2);
+  border-radius: 20px;
+}
+.default-variation .iat-image {
+  width: 55.3%;
+}
+.default-variation .iat-text {
+  width: 38.9%;
+  padding-left: 15px;
+  box-sizing: border-box;
+  margin-top: -36px;
+}
+.default-variation .iat-text .heading-1 {
+  letter-spacing: -1.8px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
 /*-------------------------------------------------
 >> Basic styles for Student Perks Block
 -------------------------------------------------*/
@@ -5068,6 +5087,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   letter-spacing: -1.7px;
   line-height: 1.2;
   margin-bottom: 14px;
+  font-weight: 500;
 }
 .student-perks-section .section-head p:last-of-type {
   margin: 0;

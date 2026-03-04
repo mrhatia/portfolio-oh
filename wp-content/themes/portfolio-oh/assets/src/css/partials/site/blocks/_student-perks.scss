@@ -1,11 +1,14 @@
 .student-perks-section {
 	.section-head {
 		max-width: 709px;
+
 		.section-title {
 			letter-spacing: -1.7px;
 			line-height: 1.2;
 			margin-bottom: 14px;
+			font-weight: 500;
 		}
+
 		p {
 			&:last-of-type {
 				margin: 0;
@@ -13,6 +16,7 @@
 		}
 	}
 }
+
 .perks-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -24,10 +28,12 @@
 	line-height: 0.65;
 	max-width: 520px;
 }
+
 .perk-button {
 	line-height: 0.65;
 	margin-top: 25px;
 }
+
 .perk-item {
 	border-radius: 12px;
 
@@ -65,6 +71,7 @@
 	a.button:visited,
 	span.button,
 	.is-style-mycustomstyle .wp-element-button {
+
 		&:hover,
 		&:focus {
 			background-color: var(--gb_gray_60);
@@ -78,11 +85,13 @@
 		padding: 35px 52px 0 54px;
 		width: 100%;
 		justify-content: space-between;
+
 		.perk-content {
 			p {
 				max-width: 100%;
 			}
 		}
+
 		.perk-image {
 			display: block;
 			margin: 0;
@@ -93,6 +102,7 @@
 	&:nth-child(3n + 3) {
 		padding: 38px 52px 0 54px;
 		width: calc(50% - 12px);
+
 		.perk-content {
 			padding-bottom: 57px;
 		}
