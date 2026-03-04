@@ -210,9 +210,9 @@
 					"slug": "72-pixels"
 				},
 				{
-					"name": "96 Pixels",
-					"size": "var(--gb_space_96)",
-					"slug": "96-pixels"
+					"name": "104 Pixels",
+					"size": "var(--gb_space_104)",
+					"slug": "104-pixels"
 				},
 				{
 					"name": "128 Pixels",

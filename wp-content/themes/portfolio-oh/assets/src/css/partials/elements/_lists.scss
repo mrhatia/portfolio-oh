@@ -6,7 +6,6 @@
 
 header,
 footer {
-
 	ul,
 	ol {
 		list-style: none;
@@ -81,7 +80,7 @@ ol ul {
 		ol {
 			counter-reset: list1;
 
-			&>li {
+			& > li {
 				&::before {
 					counter-increment: list1;
 					content: counters(list1, ".") ".";
@@ -100,7 +99,7 @@ ol ul {
 			margin-left: 13px;
 		}
 
-		&>li {
+		& > li {
 			position: relative;
 			padding-left: 24px;
 
@@ -111,7 +110,7 @@ ol ul {
 			&::before {
 				color: var(--gb_ol_list_marker_color);
 
-				@include font(axi, reg);
+				@include font(cir, med);
 
 				content: counters(list, ".") ".";
 				counter-increment: list;

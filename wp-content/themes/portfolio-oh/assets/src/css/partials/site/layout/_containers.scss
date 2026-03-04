@@ -4,9 +4,8 @@
  *
 ****/
 
-
 .wrapper {
-	max-width: 1300px;
+	max-width: 1224px;
 	width: 90%;
 	margin: 0 auto;
 }
@@ -30,7 +29,40 @@
 	}
 }
 
-
 .ctn-navy {
 	background-color: var(--wp--preset--color--navy);
+}
+.ctn-light-gray {
+	background-color: var(--gb_gray_2);
+}
+.ctn-red {
+	background-color: var(--gb_color_primary);
+
+	h1,
+	.heading-1,
+	h2,
+	.heading-2,
+	h3,
+	.heading-3,
+	h4,
+	.heading-4,
+	h5,
+	.heading-5,
+	h6,
+	.heading-6,
+	p {
+		color: var(--gb_white);
+	}
+	a.button,
+	a.button:visited,
+	span.button,
+	.is-style-mycustomstyle .wp-element-button {
+		background-color: var(--gb_color_secondary);
+		border-color: var(--gb_color_secondary);
+		&:hover,
+		&:focus-visible {
+			background-color: var(--gb_gray_60);
+			border-color: var(--gb_gray_60);
+		}
+	}
 }

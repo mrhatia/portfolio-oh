@@ -1,8 +1,5 @@
 .post-box {
-
 	.post-box-img {
-
-
 		a {
 			height: 100%;
 			display: inline-block;
@@ -24,12 +21,10 @@
 		margin-bottom: 0;
 	}
 
-
 	.post-box-img:hover img {
 		transform: scale(1.05);
 	}
 }
-
 
 .post-content {
 	margin-top: 15px;
@@ -48,7 +43,6 @@
 }
 
 .post-box-title {
-
 	h2 a,
 	h4 a {
 		display: -webkit-box;
@@ -68,9 +62,7 @@
 	}
 }
 
-
 .post-box.featured-post {
-
 	.post-box-inner {
 		display: flex;
 		align-items: center;
@@ -129,25 +121,20 @@
 }
 
 .post-box-excerpt {
-
 	p {
 		margin-bottom: 15px;
 	}
 }
 
 .hero-ctn {
-
 	.post-box-meta {
 		margin-bottom: 15px;
 	}
 }
 
-
 .post-tag {
-
 	a {
-
-		@include font(axi, reg);
+		@include font(cir, med);
 
 		margin-bottom: 8px;
 		border-bottom: none;
@@ -163,7 +150,6 @@
 		}
 	}
 }
-
 
 // blog nav
 
@@ -195,7 +181,6 @@
 	}
 }
 
-
 // blog resources
 .resources-post-box {
 	border: 0;
@@ -214,7 +199,6 @@
 }
 
 .featured-post {
-
 	.rc-post-img {
 		width: 47%;
 		min-height: 400px;

@@ -24,7 +24,7 @@ BaseTheme::block(
 				<div class="student-perks-section" id="<?php echo esc_attr( $bst_block_id ); ?>">
 					<div class="section-head">
 						<?php if ( $bst_var_blk_sperk_title ) { ?>
-							<h2 class="section-title">
+							<h2 class="section-title heading-1">
 								<?php echo html_entity_decode( $bst_var_blk_sperk_title); ?>
 							</h2>
 						<?php } ?>
@@ -53,7 +53,9 @@ BaseTheme::block(
 											<?php echo html_entity_decode( $perk_description ); ?>
 										<?php } ?>
 										<?php if ( $button ) { ?>
+										<div class="perk-button">
 											<?php echo BaseTheme::button( $button, 'button small-btn' ); ?>
+										</div>
 										<?php } ?>
 									</div>
 									<?php if ( $image ) { ?>

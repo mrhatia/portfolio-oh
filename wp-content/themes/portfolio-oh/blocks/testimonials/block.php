@@ -26,12 +26,11 @@ BaseTheme::block(
 		<div class="wrapper">
 			<div class="testimonial-section">
 				<?php if ( $bst_var_blk_tst_title ){ ?>
-					<div class="section-head center-align">
-						<h2 class="heading-2">
+					<div class="section-head">
+						<h2 class="heading-1">
 							<?php echo html_entity_decode( $bst_var_blk_tst_title ); ?>
 						</h2>
 					</div>
-					<div class="gl-s60"></div>
 				<?php } ?>
 
 				<?php if ( $bst_var_blk_tst_variation === 'manual' && ! empty( $bst_var_blk_tst_testimonials ) ){
@@ -48,7 +47,7 @@ BaseTheme::block(
 							$bst_var_cpt_tst_rating        = $fields['bst_var_cpt_tst_rating'] ?? null;
 							?>
 
-							<div class="testimonial-single d-flex align-items-center">
+							<div class="testimonial-single d-flex">
 								<div class="testimonial-content">
 									<div class="our-review-rating">
 										<?php for ( $i = 1; $i <= 5; $i++ ){ ?>

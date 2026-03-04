@@ -20,20 +20,19 @@ BaseTheme::block(
 
 		?>
 
-		<section class=" ctn-white ctn-780">
-			<div class="gl-s100"></div>
+		<section class="ctn-light-gray">
+			<div class="gl-s64"></div>
 
 			<div class="wrapper">
 				<div class="faqs-main">
 					<div class="section-head">
 						<?php if($bst_var_faq_title){ ?>
-							<h2 class="heading-2">
+							<h2 class="heading-1">
 								<?php echo html_entity_decode($bst_var_faq_title); ?>
 							</h2>
 						<?php } ?>
 					</div>
 					<?php if($bst_var_faq_faqs){ ?>
-						<div class="gl-s60"></div>
 						<div class="faqs">
 							<?php foreach( $bst_var_faq_faqs as $key =>  $faq ){
 								$faq_question       = $faq['question'] ?? null;
@@ -47,13 +46,9 @@ BaseTheme::block(
 												<?php echo html_entity_decode( $faq_question ); ?>
 											</div>
 											<div class="faq-icon">
-												<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-													viewBox="0 0 30 30" fill="none">
-													<path d="M15 6.25V23.75" stroke="#FAB800" stroke-width="3"
-														stroke-linecap="round" stroke-linejoin="round" />
-													<path d="M6.25 15H23.75" stroke="#FAB800" stroke-width="3"
-														stroke-linecap="round" stroke-linejoin="round" />
-												</svg>
+												<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+													<path d="M8 12L16 20L24 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
 											</div>
 										</div>
 										<?php if($faq_answer){ ?>
@@ -64,15 +59,11 @@ BaseTheme::block(
 									</div>
 
 							<?php } ?>
-
-
-
 						</div>
-						<div class="gl-s60"></div>
 					<?php } ?>
 				</div>
 			</div>
-			<div class="gl-s100"></div>
+			<div class="gl-s132"></div>
 		</section>
 
 		<?php

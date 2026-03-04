@@ -104,9 +104,12 @@ Mixin for transition
   --gb_space_30: clamp(24 * 1px, 6 / 806 * (100vw - 474 * 1px) + 24 * 1px, 30 * 1px);
   --gb_space_36: clamp(30 * 1px, 6 / 806 * (100vw - 474 * 1px) + 30 * 1px, 36 * 1px);
   --gb_space_48: clamp(36 * 1px, 12 / 806 * (100vw - 474 * 1px) + 36 * 1px, 48 * 1px);
+  --gb_space_64: clamp(44 * 1px, 20 / 806 * (100vw - 474 * 1px) + 44 * 1px, 64 * 1px);
   --gb_space_72: clamp(44 * 1px, 28 / 806 * (100vw - 474 * 1px) + 44 * 1px, 72 * 1px);
   --gb_space_96: clamp(52 * 1px, 44 / 806 * (100vw - 474 * 1px) + 52 * 1px, 96 * 1px);
+  --gb_space_104: clamp(52 * 1px, 52 / 806 * (100vw - 474 * 1px) + 52 * 1px, 104 * 1px);
   --gb_space_128: clamp(64 * 1px, 64 / 806 * (100vw - 474 * 1px) + 64 * 1px, 128 * 1px);
+  --gb_space_132: clamp(64 * 1px, 68 / 806 * (100vw - 474 * 1px) + 64 * 1px, 132 * 1px);
   --gb_space_156: clamp(72 * 1px, 84 / 806 * (100vw - 474 * 1px) + 72 * 1px, 156 * 1px);
   --gb_space_200: clamp(84 * 1px, 116 / 806 * (100vw - 474 * 1px) + 84 * 1px, 200 * 1px);
   --gb_space_236: clamp(98 * 1px, 138 / 806 * (100vw - 474 * 1px) + 98 * 1px, 236 * 1px);
@@ -122,8 +125,10 @@ Mixin for transition
   --gb_font_size_24: clamp(20 * 1px, 4 / 806 * (100vw - 474 * 1px) + 20 * 1px, 24 * 1px);
   --gb_font_size_26: clamp(22 * 1px, 4 / 806 * (100vw - 474 * 1px) + 22 * 1px, 26 * 1px);
   --gb_font_size_32: clamp(24 * 1px, 8 / 806 * (100vw - 474 * 1px) + 24 * 1px, 32 * 1px);
+  --gb_font_size_34: clamp(24 * 1px, 10 / 806 * (100vw - 474 * 1px) + 24 * 1px, 34 * 1px);
   --gb_font_size_40: clamp(26 * 1px, 14 / 806 * (100vw - 474 * 1px) + 26 * 1px, 40 * 1px);
   --gb_font_size_48: clamp(30 * 1px, 18 / 806 * (100vw - 474 * 1px) + 30 * 1px, 48 * 1px);
+  --gb_font_size_54: clamp(45 * 1px, 9 / 806 * (100vw - 474 * 1px) + 45 * 1px, 54 * 1px);
   --gb_font_size_60: clamp(45 * 1px, 15 / 806 * (100vw - 474 * 1px) + 45 * 1px, 60 * 1px);
   --gb_font_size_68: clamp(55 * 1px, 13 / 806 * (100vw - 474 * 1px) + 55 * 1px, 68 * 1px);
   /* -------------------------------------------------
@@ -132,18 +137,21 @@ Mixin for transition
   /*
   >> Base Colors
   */
-  --gb_color_primary: #00a4eb;
+  --gb_color_primary: #d84441;
   --gb_color_on_primary: #ffffff;
-  --gb_color_secondary: #0013ff;
+  --gb_color_secondary: #093550;
   --gb_black: #000000;
   --gb_black_1: #14191f;
   --gb_black_2: #606364;
   --gb_white: #ffffff;
   --gb_white_1: #f1f1f1;
   --gb_white_2: #f1e9e9;
+  --gb_white_3: #ffefeb;
   --gb_gray: #e0e0e0;
   --gb_gray_1: #e6e6e6;
-  --gb_gray_2: #eee;
+  --gb_gray_2: #f8f9fb;
+  --gb_gray_60: #727273;
+  --gb_lgray: #d3deeb;
   --gb_blue: #0013ff;
   --gb_blue_1: #00a4eb;
   --gb_blue_2: #2ca8dd;
@@ -166,7 +174,7 @@ Mixin for transition
   --gb_signal: #d14b3c;
   --gb_signal_bg: #fbede9;
   --gb_color_background: #ffffff;
-  --gb_color_on_background: #14191f;
+  --gb_color_on_background: #5e5e5f;
   --gb_border: #30353c;
   --gb_border_1: #545454;
   --gb_border_2: #adadad;
@@ -187,7 +195,7 @@ Mixin for transition
   --gb_highlight_color: var(--gb_color_on_primary);
   --gb_highlight_bg: var(--gb_color_primary);
   --gb_caption: var(--gb_black_2);
-  --gb_heading_color: inherit;
+  --gb_heading_color: var(--gb_black);
   --gb_heading_link_color: var(--gb_dark_text);
   --gb_heading_link_color_hover: var(--gb_dark_text);
   --gb_link_color: var(--gb_color_primary);
@@ -219,13 +227,13 @@ Mixin for transition
   --gb_hr_color: var(--gb_border_2);
   --gb_input_color: var(--gb_regular_text);
   --gb_input_bg: var(--gb_light_field_bg);
-  --gb_input_border_color: var(--gb_border);
+  --gb_input_border_color: #d9d9d9;
   --gb_input_focus_color: var(--gb_black);
   --gb_input_focus_bgcolor: var(--gb_white);
   --gb_input_focus_border_color: var(--gb_border_2);
   --gb_disabled_input_bgcolor: var(--gb_field_bg);
   --gb_disabled_input_border_color: var(--gb_border_1);
-  --gb_placeholder_color: var(--gb_light_text);
+  --gb_placeholder_color: var(--gb_gray_60);
   --gb_range_track_bgcolor: var(--gb_field_bg);
   --gb_range_thumb_bgcolor: var(--gb_color_primary);
   --gb_color_field_border_color: var(--gb_border);
@@ -531,9 +539,6 @@ h5,
 .heading-5,
 h6,
 .heading-6 {
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
   margin: 0 0 20px;
   color: var(--gb_heading_color);
   line-height: 1.3;
@@ -582,7 +587,7 @@ h6 a:focus-visible,
 
 h1,
 .heading-1 {
-  font-size: var(--gb_font_size_60);
+  font-size: var(--gb_font_size_54);
 }
 
 h2,
@@ -756,14 +761,14 @@ video {
 >> Edit these styles as required
 ------------------------------------------------- */
 body {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   transition: all 0.3s ease-in-out;
   position: relative;
-  font-size: var(--gb_font_size_16);
+  font-size: var(--gb_font_size_20);
   color: var(--gb_body_color);
   background-color: var(--gb_body_bg);
-  line-height: 1.5;
+  line-height: 1.4;
 }
 body.have-topbar {
   padding-top: var(--gb_header-height);
@@ -785,6 +790,10 @@ p {
 
 strong {
   color: var(--gb_text_strong) !important;
+}
+
+.main-section {
+  padding-top: 80px;
 }
 
 /*-------------------------------------------------
@@ -975,8 +984,8 @@ ol ul {
 }
 .page-section ol > li::before {
   color: var(--gb_ol_list_marker_color);
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   content: counters(list, ".") ".";
   counter-increment: list;
@@ -1257,20 +1266,21 @@ input[type=string],
 select,
 textarea,
 .gform-text-input-reset {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
-  font-size: var(--gb_font_size_18);
-  height: 50px;
+  font-size: var(--gb_font_size_14);
+  height: 48px;
   width: 100%;
   border: 1px solid var(--gb_input_border_color);
   background-color: var(--gb_input_bgcolor);
-  color: var(--gb_input_color);
+  color: var(--gb_gray_60);
   outline: none;
-  padding: 0 0 0 12px;
+  padding: 0 0 0 13px;
   margin: 0;
   max-width: 100%;
   box-sizing: border-box;
+  border-radius: 6px;
   transition: all 0.4s ease-in-out;
 }
 input[type=text]:focus,
@@ -1441,9 +1451,6 @@ input[type=reset] {
   border: 1px solid var(--gb_button_bgcolor);
   color: var(--gb_button_color);
   outline: none;
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: var(--gb_font_size_16);
   height: 50px;
   outline: none;
@@ -2254,8 +2261,8 @@ table.ui-datepicker_calendar {
   text-align: left;
 }
 .wp-caption p.wp-caption-text {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   font-size: var(--gb_font_size_18);
   margin: 0;
@@ -2508,8 +2515,8 @@ a img.aligncenter {
   font-size: var(--gb_font_size_20);
   line-height: 20px;
   cursor: pointer;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   width: 40px;
   height: 40px;
@@ -2610,8 +2617,8 @@ a img.aligncenter {
   border-bottom: none;
 }
 .comment-author.vcard span {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -2981,7 +2988,7 @@ header {
 .nav-container {
   display: flex;
   align-items: center;
-  margin-top: 8px;
+  gap: 32px;
 }
 
 .header-logo a {
@@ -3001,13 +3008,13 @@ header {
 }
 
 .header-inner {
-  padding: 20px 0;
+  padding: 16px 0;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
 }
 
 .header-section {
-  background-color: var(--gb_header_bgcolor);
+  background-color: var(--gb_white);
   z-index: 9;
   width: 100%;
   position: fixed;
@@ -3021,8 +3028,8 @@ header {
 
 .header-wrapper {
   box-sizing: border-box;
-  width: 90%;
-  max-width: 1300px;
+  max-width: 1392px;
+  width: 98%;
   margin: 0 auto;
 }
 
@@ -3068,45 +3075,33 @@ header {
   margin: 0;
   padding: 0;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 33px;
 }
 .header-nav ul li {
-  margin: 0 14px;
+  margin: 0 0px;
   padding: 0;
   display: inline-block;
   position: relative;
   line-height: 1;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
 }
 .header-nav ul li a,
 .header-nav ul li a:visited,
 .header-nav ul li span.menu-link {
-  padding: 0 0 10px;
+  padding: 0 0 0px;
   display: inline-block;
   line-height: 1;
   border: 0;
   position: relative;
-  color: var(--gb_header_color);
-  font-size: 15px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  color: var(--gb_gray_60);
+  font-size: var(--gb_font_size_16);
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
-}
-.header-nav ul li a::after,
-.header-nav ul li a:visited::after,
-.header-nav ul li span.menu-link::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 5px;
-  left: 0;
-  background-color: var(--gb_header_nav_border_color);
-  opacity: 0.8;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s;
 }
 .header-nav ul li span.menu-link {
   cursor: pointer;
@@ -3125,6 +3120,7 @@ header {
 .header-nav ul li a:hover,
 .header-nav ul li span.menu-link:hover {
   border: 0;
+  color: var(--gb_black);
 }
 .header-nav ul li.current-menu-item > a::after, .header-nav ul li.current-menu-parent > a::after,
 .header-nav ul li a:hover::after,
@@ -3167,8 +3163,8 @@ header {
   position: relative;
   color: var(--gb_header_submenu_color);
   transition: all 0.3s ease-in-out;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
 }
 .header-nav ul ul li a::after,
@@ -3271,8 +3267,8 @@ header {
   .nav-overlay .header-nav ul ul li a:visited {
     padding: initial;
     text-transform: inherit;
-    font-family: "Axiforma-Regular", arial, sans-serif;
-    font-weight: 400;
+    font-family: "Circular Std", arial, sans-serif;
+    font-weight: 500;
     font-style: normal;
   }
   .nav-overlay .header-nav ul ul li.current-menu-item > a, .nav-overlay .header-nav ul ul li.current-menu-parent > a {
@@ -3513,29 +3509,62 @@ header {
 /*-------------------------------------------------
 >> Styles for Home
 -------------------------------------------------*/
+.hero-landing {
+  display: flex;
+  align-items: center;
+}
+
+.hero-landing__content {
+  display: flex;
+  justify-content: flex-end;
+  width: 51.1%;
+}
+.hero-landing__content .hero-landing__content-inner {
+  max-width: 628px;
+  padding-right: 106px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.hero-landing__content h1 {
+  letter-spacing: -1.9px;
+  line-height: 1.2;
+}
+.hero-landing__content h1 mark {
+  display: block;
+  background-color: transparent;
+  color: var(--gb_color_primary);
+  padding: 0;
+}
+.hero-landing__content p {
+  max-width: 371px;
+  margin-bottom: 27px;
+}
+
+.hero-landing__image {
+  width: 48.96%;
+  float: right;
+  aspect-ratio: 705/768;
+  max-height: 768px;
+}
+
+.hero-landing-button {
+  line-height: 0.65;
+}
+
 /*-------------------------------------------------
 >> Styles for footer
 -------------------------------------------------*/
 .footer-ctn {
-  background-color: var(--gb_footer_bgcolor);
-  padding: 80px 0 0;
+  padding: 54px 0 0;
   box-sizing: border-box;
 }
-.footer-ctn h1,
-.footer-ctn h2,
-.footer-ctn h3,
-.footer-ctn h4,
-.footer-ctn h5,
-.footer-ctn h6,
-.footer-ctn p,
-.footer-ctn ul,
-.footer-ctn a {
-  color: var(--gb_footer_color);
+.footer-ctn .wrapper {
+  max-width: 1220px;
 }
 
 .footer-logo {
   line-height: 0.65;
-  margin-bottom: 40px;
+  margin-bottom: 27px;
   max-width: 210px;
 }
 .footer-logo a,
@@ -3545,19 +3574,22 @@ header {
 }
 
 .footer-widgets .single-widget {
-  width: 14%;
+  width: 24.7%;
 }
 .footer-widgets .single-widget:first-child {
-  width: 38%;
+  width: 55%;
 }
 
 .footer-nav ul {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32.5px;
 }
 .footer-nav ul li {
   padding: 0;
-  margin: 0 0 10px;
+  margin: 0 0 0px;
   list-style-type: none;
   line-height: 1;
 }
@@ -3567,11 +3599,12 @@ header {
 .footer-nav ul li a,
 .footer-nav ul li a:visited {
   padding-bottom: 2px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1;
   position: relative;
   display: inline-block;
-  color: var(--gb_f_nav_color);
+  color: var(--gb_gray_60);
+  letter-spacing: 0.1px;
 }
 .footer-nav ul li a::after,
 .footer-nav ul li a:visited::after {
@@ -3611,14 +3644,19 @@ header {
 }
 
 .footer-bottom {
-  padding: 30px 0 40px;
-  border-top: 1px solid var(--gb_border_3);
+  padding: 23px 0 31px;
+  border-top: 1px solid #dddddd;
+  margin-top: 3px;
 }
 
 .copy-right {
   width: 45%;
-  color: var(--gb_copyright_color);
-  font-size: 14px;
+  font-size: 16px;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #979aa0;
+  letter-spacing: 0.1px;
 }
 
 .legal-nav {
@@ -3636,10 +3674,9 @@ header {
 .legal-nav ul li {
   padding: 0;
   margin-bottom: 0;
-  margin-left: 30px;
-  font-size: 14px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  margin-left: 34px;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
 }
 .legal-nav ul li a,
@@ -3649,6 +3686,8 @@ header {
   color: var(--gb_legal_nav_color);
   position: relative;
   display: block;
+  letter-spacing: 0.1px;
+  font-size: 16px;
 }
 .legal-nav ul li a::after,
 .legal-nav ul li a:visited::after {
@@ -3680,25 +3719,104 @@ header {
 .legal-text {
   font-size: 15px;
   color: var(--gb_legal_text_color);
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   margin-right: 30px;
 }
 
+.social-icons {
+  margin-right: 13px;
+}
 .social-icons a {
   background-color: var(--gb_white);
-  width: 30px;
-  height: 30px;
-  margin-right: 20px;
+  width: 24px;
+  height: 24px;
+  margin-right: 24px;
+}
+.social-icons a:last-of-type {
+  margin: 0;
 }
 .social-icons a:hover, .social-icons a:focus-visible {
-  background-color: var(--gb_white_2);
+  transform: scale(1.1);
 }
 
 .social-icons svg {
   margin: 0;
-  max-width: 20px;
+  max-width: 24px;
+}
+
+.cta-content {
+  text-align: center;
+  padding: var(--gb_space_64) 0;
+  box-sizing: border-box;
+}
+.cta-content .heading-1 {
+  letter-spacing: -1.8px;
+  margin-bottom: 5px;
+}
+.cta-content p {
+  margin: 0 auto;
+}
+.cta-content .cta-button {
+  margin-top: 24px;
+  line-height: 0.65;
+}
+
+.newsletter-widget h5 {
+  font-size: var(--gb_font_size_22);
+  letter-spacing: -0.1px;
+  margin-bottom: 26px;
+}
+.newsletter-widget p {
+  font-size: var(--gb_font_size_16);
+  letter-spacing: 0.1px;
+  margin-bottom: 25px;
+}
+.newsletter-widget p:last-child {
+  margin: 0;
+}
+.newsletter-widget form {
+  margin: 0;
+  position: relative;
+}
+.newsletter-widget form .wpcf7-not-valid-tip {
+  top: 0;
+}
+.newsletter-widget form .wpcf7-form-control-wrap {
+  margin: 0;
+}
+.newsletter-widget form input[type=email] {
+  padding-right: 100px;
+}
+.newsletter-widget form .wpcf7-response-output {
+  padding: 15px 15px !important;
+  font-size: 16px !important;
+  margin-bottom: 20px !important;
+}
+.newsletter-widget form p {
+  margin: 0;
+}
+.newsletter-widget form p .wpcf7-submit {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  display: block;
+  width: 94px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--gb_color_secondary);
+  border-color: var(--gb_color_secondary);
+  border-radius: 0px 6px 6px 0px;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.newsletter-widget form p .wpcf7-submit:hover, .newsletter-widget form p .wpcf7-submit:focus-visible {
+  background-color: var(--gb_color_primary);
+  border-color: var(--gb_color_primary);
+  color: var(--gb_white);
 }
 
 /*-------------------------------------------------
@@ -3710,7 +3828,7 @@ header {
  *
 ****/
 .wrapper {
-  max-width: 1300px;
+  max-width: 1224px;
   width: 90%;
   margin: 0 auto;
 }
@@ -3730,6 +3848,46 @@ header {
 
 .ctn-navy {
   background-color: var(--wp--preset--color--navy);
+}
+
+.ctn-light-gray {
+  background-color: var(--gb_gray_2);
+}
+
+.ctn-red {
+  background-color: var(--gb_color_primary);
+}
+.ctn-red h1,
+.ctn-red .heading-1,
+.ctn-red h2,
+.ctn-red .heading-2,
+.ctn-red h3,
+.ctn-red .heading-3,
+.ctn-red h4,
+.ctn-red .heading-4,
+.ctn-red h5,
+.ctn-red .heading-5,
+.ctn-red h6,
+.ctn-red .heading-6,
+.ctn-red p {
+  color: var(--gb_white);
+}
+.ctn-red a.button,
+.ctn-red a.button:visited,
+.ctn-red span.button,
+.ctn-red .is-style-mycustomstyle .wp-element-button {
+  background-color: var(--gb_color_secondary);
+  border-color: var(--gb_color_secondary);
+}
+.ctn-red a.button:hover, .ctn-red a.button:focus-visible,
+.ctn-red a.button:visited:hover,
+.ctn-red a.button:visited:focus-visible,
+.ctn-red span.button:hover,
+.ctn-red span.button:focus-visible,
+.ctn-red .is-style-mycustomstyle .wp-element-button:hover,
+.ctn-red .is-style-mycustomstyle .wp-element-button:focus-visible {
+  background-color: var(--gb_gray_60);
+  border-color: var(--gb_gray_60);
 }
 
 /*-------------------------------------------------
@@ -3790,6 +3948,11 @@ header {
   height: var(--gb_space_48) !important;
 }
 
+.is-style-gl-64,
+.gl-s64 {
+  height: var(--gb_space_64) !important;
+}
+
 .is-style-gl-s72,
 .gl-s72 {
   height: var(--gb_space_72) !important;
@@ -3800,9 +3963,19 @@ header {
   height: var(--gb_space_96) !important;
 }
 
+.is-style-gl-104,
+.gl-104 {
+  height: var(--gb_space_104) !important;
+}
+
 .is-style-gl-s128,
 .gl-s128 {
   height: var(--gb_space_128) !important;
+}
+
+.is-style-gl-132,
+.gl-s132 {
+  height: var(--gb_space_132) !important;
 }
 
 .is-style-gl-s156,
@@ -4120,9 +4293,6 @@ ul.list-none li::before {
 ****/
 .learn-more {
   color: var(--wp--preset--color--black);
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
 }
 
 /****
@@ -4138,7 +4308,7 @@ span.button,
   position: relative;
   display: inline-block;
   overflow: hidden;
-  padding: 8px 22px;
+  padding: 11px 56px 11px 30px;
   text-decoration: none;
   color: var(--gb_theme_btn_color);
   background-color: var(--gb_theme_btn_bgcolor);
@@ -4146,12 +4316,17 @@ span.button,
   transition: all 0.35s ease-in-out;
   margin-right: 9px;
   text-align: center;
-  border-radius: 0;
-  line-height: 1.5;
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
+  line-height: 1.2;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
-  font-size: var(--gb_font_size_16);
+  font-size: var(--gb_font_size_18);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUgMTMuMDAwN0gxNi4xN0wxMS4yOSAxNy44ODA3QzEwLjkgMTguMjcwNyAxMC45IDE4LjkxMDcgMTEuMjkgMTkuMzAwN0MxMS42OCAxOS42OTA3IDEyLjMxIDE5LjY5MDcgMTIuNyAxOS4zMDA3TDE5LjI5IDEyLjcxMDdDMTkuNjggMTIuMzIwNyAxOS42OCAxMS42OTA3IDE5LjI5IDExLjMwMDdMMTIuNzEgNC43MDA3QzEyLjMyIDQuMzEwNyAxMS42OSA0LjMxMDcgMTEuMyA0LjcwMDdDMTAuOTEgNS4wOTA3IDEwLjkxIDUuNzIwNyAxMS4zIDYuMTEwN0wxNi4xNyAxMS4wMDA3SDVDNC40NSAxMS4wMDA3IDQgMTEuNDUwNyA0IDEyLjAwMDdDNCAxMi41NTA3IDQuNDUgMTMuMDAwNyA1IDEzLjAwMDdaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center right 23px;
+  border-radius: 100px;
+  letter-spacing: 0px;
 }
 a.button:last-child,
 a.button:visited:last-child,
@@ -4166,9 +4341,8 @@ span.button:hover,
 span.button:focus-visible,
 .is-style-mycustomstyle .wp-element-button:hover,
 .is-style-mycustomstyle .wp-element-button:focus-visible {
-  background-color: var(--gb_theme_btn_bgcolor_hover);
-  border: solid 2px var(--gb_theme_btn_border_color_hover);
-  color: var(--gb_theme_btn_color_hover);
+  background-color: var(--gb_color_secondary);
+  border: solid 2px var(--gb_color_secondary);
 }
 a.button.outline-btn,
 a.button:visited.outline-btn,
@@ -4423,8 +4597,8 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 
 .post-tag a {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   margin-bottom: 8px;
   border-bottom: none;
@@ -4547,13 +4721,17 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   margin: 0 auto;
 }
 
+.faqs {
+  margin-top: 45px;
+}
+
 .faq > a {
   border: none;
   display: block;
   font-size: 24px;
   line-height: 30px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   cursor: pointer;
   position: relative;
@@ -4583,11 +4761,11 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .faq-content {
   display: none;
   border-top: 0;
-  color: var(--wp--preset--color--black);
-  font-size: var(--gb_font_size_16);
-  line-height: 32px;
-  padding-bottom: 48px;
-  max-width: 716px;
+  color: var(--gb_gray_60);
+  font-size: var(--gb_font_size_20);
+  line-height: 28px;
+  max-width: 1112px;
+  padding: 0px 28px 25px;
 }
 .faq-content p:last-child {
   margin-bottom: 0;
@@ -4604,8 +4782,8 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   text-transform: uppercase;
   font-size: var(--gb_font_size_16);
   line-height: 22px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   padding: 10px;
   color: var(--wp--preset--color--black);
@@ -4630,8 +4808,8 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   background-color: rgba(40, 28, 60, 0.04);
   font-size: 15px;
   line-height: 20px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -4641,6 +4819,46 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 .glossary-content:last-child {
   border-bottom: 0;
+}
+
+.faqs-main .section-head .heading-1 {
+  letter-spacing: -1.8px;
+}
+
+.single-faq {
+  background-color: var(--gb_white);
+  border-radius: 12px;
+  border: 1px solid #dddddd;
+}
+.single-faq:nth-child(n+2) {
+  margin-top: 24px;
+}
+.single-faq .faq-title {
+  font-size: var(--gb_font_size_24);
+  color: var(--gb_black);
+  letter-spacing: -0.4px;
+}
+
+.faq-icon {
+  width: 32px;
+  height: 32px;
+}
+.faq-icon svg {
+  transition: all 0.4s ease-in-out;
+  margin: 0;
+}
+
+.single-faq-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 26px 28px 22px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.single-faq-head.active .faq-icon svg {
+  transform: rotate(180deg);
 }
 
 /*-------------------------------------------------
@@ -4676,14 +4894,11 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   width: 100%;
 }
 .single-member .member-name {
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
   margin-bottom: 8px;
 }
 .single-member .designation {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   font-size: var(--gb_font_size_18);
   margin-bottom: 0;
@@ -4802,15 +5017,12 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   width: 64%;
 }
 .single-team .member-name-popup {
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: var(--wp--preset--color--dark_text);
   margin-bottom: 5px;
 }
 .single-team .member-designation {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   color: var(--wp--preset--color--lblack);
   margin-bottom: 0;
@@ -4847,6 +5059,180 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 
 /*-------------------------------------------------
+>> Basic styles for Student Perks Block
+-------------------------------------------------*/
+.student-perks-section .section-head {
+  max-width: 709px;
+}
+.student-perks-section .section-head .section-title {
+  letter-spacing: -1.7px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+.student-perks-section .section-head p:last-of-type {
+  margin: 0;
+}
+
+.perks-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.perk-image {
+  line-height: 0.65;
+  max-width: 520px;
+}
+
+.perk-button {
+  line-height: 0.65;
+  margin-top: 25px;
+}
+
+.perk-item {
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.perk-item .perk-title {
+  font-size: var(--gb_font_size_34);
+  color: var(--gb_white);
+  line-height: 1.35;
+  margin-bottom: 15px;
+}
+.perk-item p {
+  color: var(--gb_white);
+  margin: 0;
+}
+.perk-item .perk-content {
+  max-width: 515px;
+  padding-bottom: 30px;
+}
+.perk-item .perk-content p {
+  max-width: 456px;
+}
+.perk-item .perk-image {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.perk-item a.button:hover, .perk-item a.button:focus,
+.perk-item a.button:visited:hover,
+.perk-item a.button:visited:focus,
+.perk-item span.button:hover,
+.perk-item span.button:focus,
+.perk-item .is-style-mycustomstyle .wp-element-button:hover,
+.perk-item .is-style-mycustomstyle .wp-element-button:focus {
+  background-color: var(--gb_gray_60);
+  border-color: var(--gb_gray_60);
+}
+.perk-item:nth-child(3n+1) {
+  background-color: var(--gb_color_secondary);
+  display: flex;
+  padding: 35px 52px 0 54px;
+  width: 100%;
+  justify-content: space-between;
+}
+.perk-item:nth-child(3n+1) .perk-content p {
+  max-width: 100%;
+}
+.perk-item:nth-child(3n+1) .perk-image {
+  display: block;
+  margin: 0;
+}
+.perk-item:nth-child(3n+2), .perk-item:nth-child(3n+3) {
+  padding: 38px 52px 0 54px;
+  width: calc(50% - 12px);
+}
+.perk-item:nth-child(3n+2) .perk-content, .perk-item:nth-child(3n+3) .perk-content {
+  padding-bottom: 57px;
+}
+.perk-item:nth-child(3n+2) {
+  background-color: var(--gb_color_primary);
+}
+.perk-item:nth-child(3n+3) {
+  background-color: var(--gb_lgray);
+}
+.perk-item:nth-child(3n+3) .perk-title,
+.perk-item:nth-child(3n+3) p {
+  color: var(--gb_black);
+}
+
+/*-------------------------------------------------
+>> Basic styles for Testimonial Block
+-------------------------------------------------*/
+.testimonial-section .heading-1 {
+  letter-spacing: -1.8px;
+  margin-bottom: 0;
+}
+
+.testimonial-single {
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.testimonial-single:nth-child(n+2) {
+  margin-top: 24px;
+}
+.testimonial-single:nth-child(2n+2) {
+  flex-direction: row-reverse;
+}
+.testimonial-single:nth-child(2n+2) .testimonial-content {
+  width: 64.1%;
+  background-color: var(--gb_gray_2);
+}
+.testimonial-single:nth-child(2n+2) .author-image {
+  width: 33.9%;
+}
+
+.testimonial-content {
+  background-color: var(--gb_white_3);
+  border-radius: 24px;
+  box-sizing: border-box;
+  padding: 40px 45px;
+  width: 57.8%;
+}
+.testimonial-content p {
+  color: var(--gb_gray_60);
+  font-size: var(--gb_font_size_24);
+  margin-bottom: 25px;
+}
+
+.author-image {
+  aspect-ratio: 492/284;
+  border-radius: 20px;
+  width: 40.2%;
+}
+.author-image img {
+  border-radius: 20px;
+}
+
+.our-reviews {
+  margin-top: 37px;
+}
+
+.our-review-rating {
+  margin-left: 6px;
+  display: flex;
+  gap: 1px;
+  margin-bottom: 23px;
+}
+.our-review-rating svg {
+  width: 28px;
+  height: 28px;
+  margin: 0;
+}
+
+.author-details {
+  justify-content: flex-end;
+}
+.author-details .text-20 {
+  color: var(--gb_black);
+  font-style: italic;
+  letter-spacing: -0.2px;
+}
+
+/*-------------------------------------------------
 >> Styles for Wp Buttons
 -------------------------------------------------*/
 /****
@@ -4866,9 +5252,6 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   border: 2px solid var(--gb_theme_btn_border_color);
   transition: all 0.35s ease-in-out;
   border-radius: 0;
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: var(--gb_font_size_16);
 }
 .wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus-visible {
@@ -5029,16 +5412,10 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 > Import Fonts
 ------------------------------------------------------------------ */
 @font-face {
-  font-family: "axiforma-bold";
+  font-family: "Circular Std";
   font-style: normal;
-  font-weight: 700;
-  src: url(fonts/axiforma-bold.woff2) format("woff2");
-}
-@font-face {
-  font-family: "axiforma-regular";
-  font-style: normal;
-  font-weight: 400;
-  src: url(fonts/axiforma-regular.woff2) format("woff2");
+  font-weight: 500;
+  src: url(fonts/CircularStd-Medium.woff2) format("woff2");
 }
 /* ------------------------------------------------------------------
 > Vendors CSS Starts Here

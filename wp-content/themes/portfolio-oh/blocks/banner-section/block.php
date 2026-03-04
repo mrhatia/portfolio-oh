@@ -20,11 +20,12 @@ BaseTheme::block(
 		$bst_var_blk_bans_button        = $bst_block_fields['bst_var_blk_bans_button'] ?? null;
 		$bst_var_blk_bans_image        = $bst_block_fields['bst_var_blk_bans_image'] ?? null;
 		?>
-		<section>
+		<section class="ctn-full-width ctn-light-gray">
 			<div class="wrapper">
-				<div class="iat-section two-columns justify-content-between align-items-center" id="<?php echo esc_attr( $bst_block_id ); ?>">
+				<div class="hero-landing" id="<?php echo esc_attr( $bst_block_id ); ?>">
 
-					<div class="iat-text column">
+					<div class="hero-landing__content">
+						<div class="hero-landing__content-inner">
 						<?php if ( $bst_var_blk_bans_title ) { ?>
 							<h1>
 								<?php echo html_entity_decode( $bst_var_blk_bans_title); ?>
@@ -38,10 +39,13 @@ BaseTheme::block(
 							<?php echo html_entity_decode( $bst_var_blk_bans_text ); ?>
 						<?php } ?>
 						<?php if ( $bst_var_blk_bans_button ) { ?>
+							<div class="hero-landing-button">
 							<?php echo BaseTheme::button( $bst_var_blk_bans_button, 'button' ); ?>
+							</div>
 						<?php } ?>
 					</div>
-					<div class="iat-image column" tabindex="0" role="img" aria-label="Image illustrating the content of this block">
+					</div>
+					<div class="hero-landing__image image-cover" tabindex="0" role="img" aria-label="Image illustrating the content of this block">
 						<?php if ( $bst_var_blk_bans_image ) { ?>
 							<?php BaseTheme::the_attachment_image( $bst_var_blk_bans_image, 1000 ); ?>
 						<?php } ?>

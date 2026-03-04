@@ -48,7 +48,6 @@ $bst_var_tmp_def_button = $bst_fields['bst_var_tmp_def_button'] ?? null;
 		get_template_part( 'partials/content', 'none' );
 	}
 	?>
-	<div class="ts-80"></div>
 	<!-- Content End -->
 </section>
 <?php get_footer(); ?>

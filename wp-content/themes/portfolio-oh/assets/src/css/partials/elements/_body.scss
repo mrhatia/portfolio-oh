@@ -5,19 +5,17 @@
 ------------------------------------------------- */
 
 body {
-
-	@include font(axi, reg, family weight);
+	@include font(cir, med, family weight);
 	transition: all 0.3s ease-in-out;
 	position: relative;
-	font-size: var(--gb_font_size_16);
+	font-size: var(--gb_font_size_20);
 	color: var(--gb_body_color);
 	background-color: var(--gb_body_bg);
-	line-height: 1.5;
+	line-height: 1.4;
 
 	&.have-topbar {
 		padding-top: var(--gb_header-height);
 	}
-
 }
 
 p {
@@ -29,7 +27,9 @@ p {
 	background-color: var(--gb_highlight_bg);
 }
 
-
 strong {
 	color: var(--gb_text_strong) !important;
+}
+.main-section {
+	padding-top: 80px;
 }

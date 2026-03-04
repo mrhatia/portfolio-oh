@@ -43,20 +43,20 @@ input[type="string"],
 select,
 textarea,
 .gform-text-input-reset {
-	@include font(axi, reg);
+	@include font(cir, med);
 
-	font-size: var(--gb_font_size_18);
-	height: 50px;
+	font-size: var(--gb_font_size_14);
+	height: 48px;
 	width: 100%;
 	border: 1px solid var(--gb_input_border_color);
 	background-color: var(--gb_input_bgcolor);
-	color: var(--gb_input_color);
+	color: var(--gb_gray_60);
 	outline: none;
-	padding: 0 0 0 12px;
+	padding: 0 0 0 13px;
 	margin: 0;
 	max-width: 100%;
 	box-sizing: border-box;
-
+	border-radius: 6px;
 	@include transition(all, 0.4s, ease-in-out);
 
 	&:focus {

@@ -1,8 +1,7 @@
 @media (min-width: 1024px) {
-
-	.header-nav ul li:hover>ul,
+	.header-nav ul li:hover > ul,
 	.menu-item-has-children ul.focused,
-	.header-nav ul li a:focus-visible+ul {
+	.header-nav ul li a:focus-visible + ul {
 		opacity: 1;
 		visibility: visible;
 		overflow: visible;
@@ -26,49 +25,52 @@
 		margin: 0;
 		padding: 0;
 		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 33px;
 
 		li {
-			margin: 0 14px;
+			margin: 0 0px;
 			padding: 0;
 			display: inline-block;
 			position: relative;
 			line-height: 1;
 
-			@include font(axi, reg);
+			@include font(cir, med);
 
 			a,
 			a:visited,
 			span.menu-link {
-				padding: 0 0 10px;
+				padding: 0 0 0px;
 				display: inline-block;
 				line-height: 1;
 				border: 0;
 				position: relative;
-				color: var(--gb_header_color);
-				font-size: 15px;
+				color: var(--gb_gray_60);
+				font-size: var(--gb_font_size_16);
 
-				@include font(axi, reg);
+				@include font(cir, med);
 
-				&::after {
-					content: "";
-					position: absolute;
-					width: 100%;
-					height: 1px;
-					bottom: 5px;
-					left: 0;
-					background-color: var(--gb_header_nav_border_color);
-					opacity: 0.8;
-					transform: scaleX(0);
-					transform-origin: bottom right;
-					transition: transform 0.3s;
-				}
+				// &::after {
+				// 	content: "";
+				// 	position: absolute;
+				// 	width: 100%;
+				// 	height: 1px;
+				// 	bottom: 5px;
+				// 	left: 0;
+				// 	background-color: var(--gb_header_nav_border_color);
+				// 	opacity: 0.8;
+				// 	transform: scaleX(0);
+				// 	transform-origin: bottom right;
+				// 	transition: transform 0.3s;
+				// }
 			}
 
 			span.menu-link {
 				cursor: pointer;
 			}
 
-			&.menu-item-has-children>a {
+			&.menu-item-has-children > a {
 				padding-right: 15px;
 				background-position: top 6px right;
 				background-repeat: no-repeat;
@@ -80,11 +82,12 @@
 				}
 			}
 
-			&.current-menu-item>a,
-			&.current-menu-parent>a,
+			&.current-menu-item > a,
+			&.current-menu-parent > a,
 			a:hover,
 			span.menu-link:hover {
 				border: 0;
+				color: var(--gb_black);
 
 				&::after {
 					transform-origin: bottom left;
@@ -132,7 +135,7 @@
 					color: var(--gb_header_submenu_color);
 
 					@include transition(all, 0.3s, ease-in-out);
-					@include font(axi, reg);
+					@include font(cir, med);
 
 					&::after {
 						bottom: -4px;
@@ -148,8 +151,8 @@
 					color: var(--gb_header_submenu_color_hover);
 				}
 
-				&.current-menu-item>a,
-				&.current-menu-parent>a,
+				&.current-menu-item > a,
+				&.current-menu-parent > a,
 				a:hover,
 				span.menu-link:hover {
 					border: 0;

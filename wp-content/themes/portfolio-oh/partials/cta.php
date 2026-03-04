@@ -19,9 +19,7 @@ $bst_var_ftrcta_headline         = $bst_fields['bst_var_page_cta_headline'] ?? $
 <section id="cta-section" class="cta-section">
 	<!-- cta Start -->
 	<div class="cta-single">
-		<div class="wrapper">
-			<h4><?php echo esc_html( $bst_var_ftrcta_headline ); ?></h4>
-		</div>
+
 	</div>
 	<!-- cta End -->
 </section>

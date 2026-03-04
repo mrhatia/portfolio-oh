@@ -27,7 +27,6 @@ get_header();
 		<div class="<?php BaseTheme::have_post_class( 'three-columns' ); ?>">
 			<!-- Content Start -->
 			<?php $bst_query = BaseTheme::query(); ?>
-			<div class="ts-80"></div>
 			<!-- Content End -->
 		</div>
 	</div>

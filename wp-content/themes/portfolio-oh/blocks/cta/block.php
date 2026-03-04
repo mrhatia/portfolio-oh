@@ -19,12 +19,12 @@ BaseTheme::block(
 		$bst_var_blk_cta_text        = $bst_block_fields['bst_var_blk_cta_text'] ?? null;
 		$bst_var_blk_cta_button        = $bst_block_fields['bst_var_blk_cta_button'] ?? null;
 		?>
-		<section>
+		<section class="ctn-red">
 			<div class="wrapper">
 				<div class="cta-section" id="<?php echo esc_attr( $bst_block_id ); ?>">
 					<div class="cta-content">
 						<?php if ( $bst_var_blk_cta_title ) { ?>
-							<h2 class="section-title">
+							<h2 class="heading-1">
 								<?php echo html_entity_decode( $bst_var_blk_cta_title); ?>
 							</h2>
 						<?php } ?>

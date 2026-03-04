@@ -53,6 +53,11 @@
 	height: var(--gb_space_48) !important;
 }
 
+.is-style-gl-64,
+.gl-s64 {
+	height: var(--gb_space_64) !important;
+}
+
 .is-style-gl-s72,
 .gl-s72 {
 	height: var(--gb_space_72) !important;
@@ -63,9 +68,18 @@
 	height: var(--gb_space_96) !important;
 }
 
+.is-style-gl-104,
+.gl-104 {
+	height: var(--gb_space_104) !important;
+}
+
 .is-style-gl-s128,
 .gl-s128 {
 	height: var(--gb_space_128) !important;
+}
+.is-style-gl-132,
+.gl-s132 {
+	height: var(--gb_space_132) !important;
 }
 
 .is-style-gl-s156,

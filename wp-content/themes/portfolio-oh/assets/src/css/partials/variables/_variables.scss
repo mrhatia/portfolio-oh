@@ -1,5 +1,4 @@
 :root {
-
 	/*-------------------------------------------------
 	>> Variables for Spaces
 	-------------------------------------------------*/
@@ -14,9 +13,12 @@
 	@include spacing(--gb_space_30, 30, 24);
 	@include spacing(--gb_space_36, 36, 30);
 	@include spacing(--gb_space_48, 48, 36);
+	@include spacing(--gb_space_64, 64, 44);
 	@include spacing(--gb_space_72, 72, 44);
 	@include spacing(--gb_space_96, 96, 52);
+	@include spacing(--gb_space_104, 104, 52);
 	@include spacing(--gb_space_128, 128, 64);
+	@include spacing(--gb_space_132, 132, 64);
 	@include spacing(--gb_space_156, 156, 72);
 	@include spacing(--gb_space_200, 200, 84);
 	@include spacing(--gb_space_236, 236, 98);
@@ -34,11 +36,12 @@
 	@include font_size(--gb_font_size_24, 24, 20);
 	@include font_size(--gb_font_size_26, 26, 22);
 	@include font_size(--gb_font_size_32, 32, 24);
+	@include font_size(--gb_font_size_34, 34, 24);
 	@include font_size(--gb_font_size_40, 40, 26);
 	@include font_size(--gb_font_size_48, 48, 30);
+	@include font_size(--gb_font_size_54, 54, 45);
 	@include font_size(--gb_font_size_60, 60, 45);
 	@include font_size(--gb_font_size_68, 68, 55);
-
 
 	/* -------------------------------------------------
 	>> Color variables
@@ -49,11 +52,11 @@
 	*/
 
 	// Theme Primary
-	--gb_color_primary: #00a4eb;
+	--gb_color_primary: #d84441;
 	--gb_color_on_primary: #ffffff;
 
 	// Theme Secondary
-	--gb_color_secondary: #0013ff;
+	--gb_color_secondary: #093550;
 
 	// Theme Dark
 	--gb_black: #000000;
@@ -64,11 +67,14 @@
 	--gb_white: #ffffff;
 	--gb_white_1: #f1f1f1;
 	--gb_white_2: #f1e9e9;
+	--gb_white_3: #ffefeb;
 
 	// Theme Colors
 	--gb_gray: #e0e0e0;
 	--gb_gray_1: #e6e6e6;
-	--gb_gray_2: #eee;
+	--gb_gray_2: #f8f9fb;
+	--gb_gray_60: #727273;
+	--gb_lgray: #d3deeb;
 
 	--gb_blue: #0013ff;
 	--gb_blue_1: #00a4eb;
@@ -98,13 +104,11 @@
 	--gb_light: #f8f9fa;
 	--gb_dark: #212529;
 
-
 	--gb_signal: #d14b3c;
 	--gb_signal_bg: #fbede9;
 
-
 	--gb_color_background: #ffffff;
-	--gb_color_on_background: #14191f;
+	--gb_color_on_background: #5e5e5f;
 
 	// Borders
 	--gb_border: #30353c;
@@ -112,7 +116,6 @@
 	--gb_border_2: #adadad;
 	--gb_border_3: #e0e0e0;
 	--gb_border_4: #14191f;
-
 
 	/* -------------------------------------------------
 	>> Base Colors
@@ -137,7 +140,7 @@
 
 	// Headings
 
-	--gb_heading_color: inherit;
+	--gb_heading_color: var(--gb_black);
 	--gb_heading_link_color: var(--gb_dark_text);
 	--gb_heading_link_color_hover: var(--gb_dark_text);
 
@@ -151,7 +154,6 @@
 	--gb_list_ul_marker_color: var(--gb_color_primary);
 	--gb_list_ol_marker_color: var(--gb_color_primary);
 	--gb_list_marker_bgcolor: var(--gb_border_4);
-
 
 	// Blockquote Colors
 	--gb_blockquote_color: var(--gb_regular_text);
@@ -187,7 +189,7 @@
 
 	--gb_input_color: var(--gb_regular_text);
 	--gb_input_bg: var(--gb_light_field_bg);
-	--gb_input_border_color: var(--gb_border);
+	--gb_input_border_color: #d9d9d9;
 
 	--gb_input_focus_color: var(--gb_black);
 	--gb_input_focus_bgcolor: var(--gb_white);
@@ -196,7 +198,7 @@
 	--gb_disabled_input_bgcolor: var(--gb_field_bg);
 	--gb_disabled_input_border_color: var(--gb_border_1);
 
-	--gb_placeholder_color: var(--gb_light_text);
+	--gb_placeholder_color: var(--gb_gray_60);
 	--gb_range_track_bgcolor: var(--gb_field_bg);
 	--gb_range_thumb_bgcolor: var(--gb_color_primary);
 	--gb_color_field_border_color: var(--gb_border);
@@ -328,7 +330,6 @@
 	--gb_topbar_bgcolor: var(--gb_color_primary);
 	--gb_topbar_color: var(--gb_white);
 	--gb_topbar_link_color: var(--gb_white);
-
 
 	// Footer
 	--gb_footer_bgcolor: var(--gb_dark_text);

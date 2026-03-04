@@ -476,9 +476,12 @@ Mixin for transition
   --gb_space_30: clamp(24 * 1px, 6 / 806 * (100vw - 474 * 1px) + 24 * 1px, 30 * 1px);
   --gb_space_36: clamp(30 * 1px, 6 / 806 * (100vw - 474 * 1px) + 30 * 1px, 36 * 1px);
   --gb_space_48: clamp(36 * 1px, 12 / 806 * (100vw - 474 * 1px) + 36 * 1px, 48 * 1px);
+  --gb_space_64: clamp(44 * 1px, 20 / 806 * (100vw - 474 * 1px) + 44 * 1px, 64 * 1px);
   --gb_space_72: clamp(44 * 1px, 28 / 806 * (100vw - 474 * 1px) + 44 * 1px, 72 * 1px);
   --gb_space_96: clamp(52 * 1px, 44 / 806 * (100vw - 474 * 1px) + 52 * 1px, 96 * 1px);
+  --gb_space_104: clamp(52 * 1px, 52 / 806 * (100vw - 474 * 1px) + 52 * 1px, 104 * 1px);
   --gb_space_128: clamp(64 * 1px, 64 / 806 * (100vw - 474 * 1px) + 64 * 1px, 128 * 1px);
+  --gb_space_132: clamp(64 * 1px, 68 / 806 * (100vw - 474 * 1px) + 64 * 1px, 132 * 1px);
   --gb_space_156: clamp(72 * 1px, 84 / 806 * (100vw - 474 * 1px) + 72 * 1px, 156 * 1px);
   --gb_space_200: clamp(84 * 1px, 116 / 806 * (100vw - 474 * 1px) + 84 * 1px, 200 * 1px);
   --gb_space_236: clamp(98 * 1px, 138 / 806 * (100vw - 474 * 1px) + 98 * 1px, 236 * 1px);
@@ -494,8 +497,10 @@ Mixin for transition
   --gb_font_size_24: clamp(20 * 1px, 4 / 806 * (100vw - 474 * 1px) + 20 * 1px, 24 * 1px);
   --gb_font_size_26: clamp(22 * 1px, 4 / 806 * (100vw - 474 * 1px) + 22 * 1px, 26 * 1px);
   --gb_font_size_32: clamp(24 * 1px, 8 / 806 * (100vw - 474 * 1px) + 24 * 1px, 32 * 1px);
+  --gb_font_size_34: clamp(24 * 1px, 10 / 806 * (100vw - 474 * 1px) + 24 * 1px, 34 * 1px);
   --gb_font_size_40: clamp(26 * 1px, 14 / 806 * (100vw - 474 * 1px) + 26 * 1px, 40 * 1px);
   --gb_font_size_48: clamp(30 * 1px, 18 / 806 * (100vw - 474 * 1px) + 30 * 1px, 48 * 1px);
+  --gb_font_size_54: clamp(45 * 1px, 9 / 806 * (100vw - 474 * 1px) + 45 * 1px, 54 * 1px);
   --gb_font_size_60: clamp(45 * 1px, 15 / 806 * (100vw - 474 * 1px) + 45 * 1px, 60 * 1px);
   --gb_font_size_68: clamp(55 * 1px, 13 / 806 * (100vw - 474 * 1px) + 55 * 1px, 68 * 1px);
   /* -------------------------------------------------
@@ -504,18 +509,21 @@ Mixin for transition
   /*
   >> Base Colors
   */
-  --gb_color_primary: #00a4eb;
+  --gb_color_primary: #d84441;
   --gb_color_on_primary: #ffffff;
-  --gb_color_secondary: #0013ff;
+  --gb_color_secondary: #093550;
   --gb_black: #000000;
   --gb_black_1: #14191f;
   --gb_black_2: #606364;
   --gb_white: #ffffff;
   --gb_white_1: #f1f1f1;
   --gb_white_2: #f1e9e9;
+  --gb_white_3: #ffefeb;
   --gb_gray: #e0e0e0;
   --gb_gray_1: #e6e6e6;
-  --gb_gray_2: #eee;
+  --gb_gray_2: #f8f9fb;
+  --gb_gray_60: #727273;
+  --gb_lgray: #d3deeb;
   --gb_blue: #0013ff;
   --gb_blue_1: #00a4eb;
   --gb_blue_2: #2ca8dd;
@@ -538,7 +546,7 @@ Mixin for transition
   --gb_signal: #d14b3c;
   --gb_signal_bg: #fbede9;
   --gb_color_background: #ffffff;
-  --gb_color_on_background: #14191f;
+  --gb_color_on_background: #5e5e5f;
   --gb_border: #30353c;
   --gb_border_1: #545454;
   --gb_border_2: #adadad;
@@ -559,7 +567,7 @@ Mixin for transition
   --gb_highlight_color: var(--gb_color_on_primary);
   --gb_highlight_bg: var(--gb_color_primary);
   --gb_caption: var(--gb_black_2);
-  --gb_heading_color: inherit;
+  --gb_heading_color: var(--gb_black);
   --gb_heading_link_color: var(--gb_dark_text);
   --gb_heading_link_color_hover: var(--gb_dark_text);
   --gb_link_color: var(--gb_color_primary);
@@ -591,13 +599,13 @@ Mixin for transition
   --gb_hr_color: var(--gb_border_2);
   --gb_input_color: var(--gb_regular_text);
   --gb_input_bg: var(--gb_light_field_bg);
-  --gb_input_border_color: var(--gb_border);
+  --gb_input_border_color: #d9d9d9;
   --gb_input_focus_color: var(--gb_black);
   --gb_input_focus_bgcolor: var(--gb_white);
   --gb_input_focus_border_color: var(--gb_border_2);
   --gb_disabled_input_bgcolor: var(--gb_field_bg);
   --gb_disabled_input_border_color: var(--gb_border_1);
-  --gb_placeholder_color: var(--gb_light_text);
+  --gb_placeholder_color: var(--gb_gray_60);
   --gb_range_track_bgcolor: var(--gb_field_bg);
   --gb_range_thumb_bgcolor: var(--gb_color_primary);
   --gb_color_field_border_color: var(--gb_border);
@@ -815,8 +823,8 @@ Mixin for transition
 }
 
 .editor-styles-wrapper {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-size: var(--gb_font_size_20);
   color: var(--gb_body_color);
   line-height: 1.5;
@@ -1082,9 +1090,6 @@ Mixin for transition
   font-size: var(--gb_font_size_22);
   margin: 8px 0;
   text-align: center;
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
 }
 .editor-styles-wrapper .acf-field-block-label .acf-label {
   height: 40px;
@@ -1094,9 +1099,6 @@ Mixin for transition
   font-size: var(--gb_font_size_22);
   margin: 8px 0;
   text-align: center;
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
 }
 .editor-styles-wrapper .wp-block-spacer {
   background: rgba(0, 0, 0, 0.1);
@@ -1113,9 +1115,6 @@ Mixin for transition
 .editor-styles-wrapper .heading-5,
 .editor-styles-wrapper h6,
 .editor-styles-wrapper .heading-6 {
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
   margin: 0 0 20px;
   color: var(--gb_heading_color);
   line-height: 1.3;
@@ -1163,7 +1162,7 @@ Mixin for transition
 }
 .editor-styles-wrapper h1,
 .editor-styles-wrapper .heading-1 {
-  font-size: var(--gb_font_size_60);
+  font-size: var(--gb_font_size_54);
 }
 .editor-styles-wrapper h2,
 .editor-styles-wrapper .heading-2 {
@@ -1368,8 +1367,8 @@ Mixin for transition
 }
 .editor-styles-wrapper .page-section ol > li::before {
   color: var(--gb_ol_list_marker_color);
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   content: counters(list, ".") ".";
   counter-increment: list;
@@ -1576,8 +1575,8 @@ Mixin for transition
   text-align: left;
 }
 .editor-styles-wrapper .wp-caption p.wp-caption-text {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   font-size: var(--gb_font_size_18);
   margin: 0;
@@ -1768,8 +1767,8 @@ Mixin for transition
   font-size: var(--gb_font_size_20);
   line-height: 20px;
   cursor: pointer;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   width: 40px;
   height: 40px;
@@ -1857,8 +1856,8 @@ Mixin for transition
   border-bottom: none;
 }
 .editor-styles-wrapper .comment-author.vcard span {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
 }
 .editor-styles-wrapper .comment-metadata {
@@ -2061,9 +2060,6 @@ Mixin for transition
   border: 2px solid var(--gb_theme_btn_border_color);
   transition: all 0.35s ease-in-out;
   border-radius: 0;
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: var(--gb_font_size_16);
 }
 .editor-styles-wrapper .wp-block-button .wp-block-button__link:hover, .editor-styles-wrapper .wp-block-button .wp-block-button__link:focus-visible {
@@ -2152,6 +2148,12 @@ Mixin for transition
   -------------------------------------------------*/
   /*-------------------------------------------------
   >> Basic styles for Image Alongside Text Block
+  -------------------------------------------------*/
+  /*-------------------------------------------------
+  >> Basic styles for Student Perks Block
+  -------------------------------------------------*/
+  /*-------------------------------------------------
+  >> Basic styles for Testimonial Block
   -------------------------------------------------*/
   /* Forms */
   /* -------------------------------------------------
@@ -2314,6 +2316,10 @@ Mixin for transition
 .acf-block-preview .gl-s48 {
   height: var(--gb_space_48) !important;
 }
+.acf-block-preview .is-style-gl-64,
+.acf-block-preview .gl-s64 {
+  height: var(--gb_space_64) !important;
+}
 .acf-block-preview .is-style-gl-s72,
 .acf-block-preview .gl-s72 {
   height: var(--gb_space_72) !important;
@@ -2322,9 +2328,17 @@ Mixin for transition
 .acf-block-preview .gl-s96 {
   height: var(--gb_space_96) !important;
 }
+.acf-block-preview .is-style-gl-104,
+.acf-block-preview .gl-104 {
+  height: var(--gb_space_104) !important;
+}
 .acf-block-preview .is-style-gl-s128,
 .acf-block-preview .gl-s128 {
   height: var(--gb_space_128) !important;
+}
+.acf-block-preview .is-style-gl-132,
+.acf-block-preview .gl-s132 {
+  height: var(--gb_space_132) !important;
 }
 .acf-block-preview .is-style-gl-s156,
 .acf-block-preview .gl-s156 {
@@ -2557,9 +2571,6 @@ Mixin for transition
 }
 .acf-block-preview .learn-more {
   color: var(--wp--preset--color--black);
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
 }
 .acf-block-preview a.button,
 .acf-block-preview a.button:visited,
@@ -2569,7 +2580,7 @@ Mixin for transition
   position: relative;
   display: inline-block;
   overflow: hidden;
-  padding: 8px 22px;
+  padding: 11px 56px 11px 30px;
   text-decoration: none;
   color: var(--gb_theme_btn_color);
   background-color: var(--gb_theme_btn_bgcolor);
@@ -2577,12 +2588,17 @@ Mixin for transition
   transition: all 0.35s ease-in-out;
   margin-right: 9px;
   text-align: center;
-  border-radius: 0;
-  line-height: 1.5;
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
+  line-height: 1.2;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
-  font-size: var(--gb_font_size_16);
+  font-size: var(--gb_font_size_18);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUgMTMuMDAwN0gxNi4xN0wxMS4yOSAxNy44ODA3QzEwLjkgMTguMjcwNyAxMC45IDE4LjkxMDcgMTEuMjkgMTkuMzAwN0MxMS42OCAxOS42OTA3IDEyLjMxIDE5LjY5MDcgMTIuNyAxOS4zMDA3TDE5LjI5IDEyLjcxMDdDMTkuNjggMTIuMzIwNyAxOS42OCAxMS42OTA3IDE5LjI5IDExLjMwMDdMMTIuNzEgNC43MDA3QzEyLjMyIDQuMzEwNyAxMS42OSA0LjMxMDcgMTEuMyA0LjcwMDdDMTAuOTEgNS4wOTA3IDEwLjkxIDUuNzIwNyAxMS4zIDYuMTEwN0wxNi4xNyAxMS4wMDA3SDVDNC40NSAxMS4wMDA3IDQgMTEuNDUwNyA0IDEyLjAwMDdDNCAxMi41NTA3IDQuNDUgMTMuMDAwNyA1IDEzLjAwMDdaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center right 23px;
+  border-radius: 100px;
+  letter-spacing: 0px;
 }
 .acf-block-preview a.button:last-child,
 .acf-block-preview a.button:visited:last-child,
@@ -2597,9 +2613,8 @@ Mixin for transition
 .acf-block-preview span.button:focus-visible,
 .acf-block-preview .is-style-mycustomstyle .wp-element-button:hover,
 .acf-block-preview .is-style-mycustomstyle .wp-element-button:focus-visible {
-  background-color: var(--gb_theme_btn_bgcolor_hover);
-  border: solid 2px var(--gb_theme_btn_border_color_hover);
-  color: var(--gb_theme_btn_color_hover);
+  background-color: var(--gb_color_secondary);
+  border: solid 2px var(--gb_color_secondary);
 }
 .acf-block-preview a.button.outline-btn,
 .acf-block-preview a.button:visited.outline-btn,
@@ -2752,13 +2767,16 @@ Mixin for transition
   max-width: 825px;
   margin: 0 auto;
 }
+.acf-block-preview .faqs {
+  margin-top: 45px;
+}
 .acf-block-preview .faq > a {
   border: none;
   display: block;
   font-size: 24px;
   line-height: 30px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   cursor: pointer;
   position: relative;
@@ -2788,11 +2806,11 @@ Mixin for transition
 .acf-block-preview .faq-content {
   display: none;
   border-top: 0;
-  color: var(--wp--preset--color--black);
-  font-size: var(--gb_font_size_16);
-  line-height: 32px;
-  padding-bottom: 48px;
-  max-width: 716px;
+  color: var(--gb_gray_60);
+  font-size: var(--gb_font_size_20);
+  line-height: 28px;
+  max-width: 1112px;
+  padding: 0px 28px 25px;
 }
 .acf-block-preview .faq-content p:last-child {
   margin-bottom: 0;
@@ -2808,8 +2826,8 @@ Mixin for transition
   text-transform: uppercase;
   font-size: var(--gb_font_size_16);
   line-height: 22px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   padding: 10px;
   color: var(--wp--preset--color--black);
@@ -2833,8 +2851,8 @@ Mixin for transition
   background-color: rgba(40, 28, 60, 0.04);
   font-size: 15px;
   line-height: 20px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
 }
 .acf-block-preview .glossary-content {
@@ -2843,6 +2861,42 @@ Mixin for transition
 }
 .acf-block-preview .glossary-content:last-child {
   border-bottom: 0;
+}
+.acf-block-preview .faqs-main .section-head .heading-1 {
+  letter-spacing: -1.8px;
+}
+.acf-block-preview .single-faq {
+  background-color: var(--gb_white);
+  border-radius: 12px;
+  border: 1px solid #dddddd;
+}
+.acf-block-preview .single-faq:nth-child(n+2) {
+  margin-top: 24px;
+}
+.acf-block-preview .single-faq .faq-title {
+  font-size: var(--gb_font_size_24);
+  color: var(--gb_black);
+  letter-spacing: -0.4px;
+}
+.acf-block-preview .faq-icon {
+  width: 32px;
+  height: 32px;
+}
+.acf-block-preview .faq-icon svg {
+  transition: all 0.4s ease-in-out;
+  margin: 0;
+}
+.acf-block-preview .single-faq-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 26px 28px 22px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.acf-block-preview .single-faq-head.active .faq-icon svg {
+  transform: rotate(180deg);
 }
 .acf-block-preview .team-members {
   display: flex;
@@ -2873,14 +2927,11 @@ Mixin for transition
   width: 100%;
 }
 .acf-block-preview .single-member .member-name {
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
   margin-bottom: 8px;
 }
 .acf-block-preview .single-member .designation {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   font-size: var(--gb_font_size_18);
   margin-bottom: 0;
@@ -2991,15 +3042,12 @@ Mixin for transition
   width: 64%;
 }
 .acf-block-preview .single-team .member-name-popup {
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: var(--wp--preset--color--dark_text);
   margin-bottom: 5px;
 }
 .acf-block-preview .single-team .member-designation {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
   color: var(--wp--preset--color--lblack);
   margin-bottom: 0;
@@ -3027,6 +3075,162 @@ Mixin for transition
 }
 .acf-block-preview .image-at-right .iat-image {
   order: 2;
+}
+.acf-block-preview .student-perks-section .section-head {
+  max-width: 709px;
+}
+.acf-block-preview .student-perks-section .section-head .section-title {
+  letter-spacing: -1.7px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+.acf-block-preview .student-perks-section .section-head p:last-of-type {
+  margin: 0;
+}
+.acf-block-preview .perks-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 48px;
+}
+.acf-block-preview .perk-image {
+  line-height: 0.65;
+  max-width: 520px;
+}
+.acf-block-preview .perk-button {
+  line-height: 0.65;
+  margin-top: 25px;
+}
+.acf-block-preview .perk-item {
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.acf-block-preview .perk-item .perk-title {
+  font-size: var(--gb_font_size_34);
+  color: var(--gb_white);
+  line-height: 1.35;
+  margin-bottom: 15px;
+}
+.acf-block-preview .perk-item p {
+  color: var(--gb_white);
+  margin: 0;
+}
+.acf-block-preview .perk-item .perk-content {
+  max-width: 515px;
+  padding-bottom: 30px;
+}
+.acf-block-preview .perk-item .perk-content p {
+  max-width: 456px;
+}
+.acf-block-preview .perk-item .perk-image {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.acf-block-preview .perk-item a.button:hover, .acf-block-preview .perk-item a.button:focus,
+.acf-block-preview .perk-item a.button:visited:hover,
+.acf-block-preview .perk-item a.button:visited:focus,
+.acf-block-preview .perk-item span.button:hover,
+.acf-block-preview .perk-item span.button:focus,
+.acf-block-preview .perk-item .is-style-mycustomstyle .wp-element-button:hover,
+.acf-block-preview .perk-item .is-style-mycustomstyle .wp-element-button:focus {
+  background-color: var(--gb_gray_60);
+  border-color: var(--gb_gray_60);
+}
+.acf-block-preview .perk-item:nth-child(3n+1) {
+  background-color: var(--gb_color_secondary);
+  display: flex;
+  padding: 35px 52px 0 54px;
+  width: 100%;
+  justify-content: space-between;
+}
+.acf-block-preview .perk-item:nth-child(3n+1) .perk-content p {
+  max-width: 100%;
+}
+.acf-block-preview .perk-item:nth-child(3n+1) .perk-image {
+  display: block;
+  margin: 0;
+}
+.acf-block-preview .perk-item:nth-child(3n+2), .acf-block-preview .perk-item:nth-child(3n+3) {
+  padding: 38px 52px 0 54px;
+  width: calc(50% - 12px);
+}
+.acf-block-preview .perk-item:nth-child(3n+2) .perk-content, .acf-block-preview .perk-item:nth-child(3n+3) .perk-content {
+  padding-bottom: 57px;
+}
+.acf-block-preview .perk-item:nth-child(3n+2) {
+  background-color: var(--gb_color_primary);
+}
+.acf-block-preview .perk-item:nth-child(3n+3) {
+  background-color: var(--gb_lgray);
+}
+.acf-block-preview .perk-item:nth-child(3n+3) .perk-title,
+.acf-block-preview .perk-item:nth-child(3n+3) p {
+  color: var(--gb_black);
+}
+.acf-block-preview .testimonial-section .heading-1 {
+  letter-spacing: -1.8px;
+  margin-bottom: 0;
+}
+.acf-block-preview .testimonial-single {
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.acf-block-preview .testimonial-single:nth-child(n+2) {
+  margin-top: 24px;
+}
+.acf-block-preview .testimonial-single:nth-child(2n+2) {
+  flex-direction: row-reverse;
+}
+.acf-block-preview .testimonial-single:nth-child(2n+2) .testimonial-content {
+  width: 64.1%;
+  background-color: var(--gb_gray_2);
+}
+.acf-block-preview .testimonial-single:nth-child(2n+2) .author-image {
+  width: 33.9%;
+}
+.acf-block-preview .testimonial-content {
+  background-color: var(--gb_white_3);
+  border-radius: 24px;
+  box-sizing: border-box;
+  padding: 40px 45px;
+  width: 57.8%;
+}
+.acf-block-preview .testimonial-content p {
+  color: var(--gb_gray_60);
+  font-size: var(--gb_font_size_24);
+  margin-bottom: 25px;
+}
+.acf-block-preview .author-image {
+  aspect-ratio: 492/284;
+  border-radius: 20px;
+  width: 40.2%;
+}
+.acf-block-preview .author-image img {
+  border-radius: 20px;
+}
+.acf-block-preview .our-reviews {
+  margin-top: 37px;
+}
+.acf-block-preview .our-review-rating {
+  margin-left: 6px;
+  display: flex;
+  gap: 1px;
+  margin-bottom: 23px;
+}
+.acf-block-preview .our-review-rating svg {
+  width: 28px;
+  height: 28px;
+  margin: 0;
+}
+.acf-block-preview .author-details {
+  justify-content: flex-end;
+}
+.acf-block-preview .author-details .text-20 {
+  color: var(--gb_black);
+  font-style: italic;
+  letter-spacing: -0.2px;
 }
 .acf-block-preview form {
   margin: 0 0 20px;
@@ -3063,20 +3267,21 @@ Mixin for transition
 .acf-block-preview select,
 .acf-block-preview textarea,
 .acf-block-preview .gform-text-input-reset {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
   font-style: normal;
-  font-size: var(--gb_font_size_18);
-  height: 50px;
+  font-size: var(--gb_font_size_14);
+  height: 48px;
   width: 100%;
   border: 1px solid var(--gb_input_border_color);
   background-color: var(--gb_input_bgcolor);
-  color: var(--gb_input_color);
+  color: var(--gb_gray_60);
   outline: none;
-  padding: 0 0 0 12px;
+  padding: 0 0 0 13px;
   margin: 0;
   max-width: 100%;
   box-sizing: border-box;
+  border-radius: 6px;
   transition: all 0.4s ease-in-out;
 }
 .acf-block-preview input[type=text]:focus,
@@ -3214,9 +3419,6 @@ Mixin for transition
   border: 1px solid var(--gb_button_bgcolor);
   color: var(--gb_button_color);
   outline: none;
-  font-family: "Axiforma-Bold", arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: var(--gb_font_size_16);
   height: 50px;
   outline: none;

@@ -79,14 +79,15 @@ header {
 
 	img {
 		width: 14px;
-		filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(220deg) brightness(102%) contrast(103%);
+		filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(220deg)
+			brightness(102%) contrast(103%);
 	}
 }
 
 .nav-container {
 	display: flex;
 	align-items: center;
-	margin-top: 8px;
+	gap: 32px;
 }
 
 .header-logo a {
@@ -106,14 +107,14 @@ header {
 }
 
 .header-inner {
-	padding: 20px 0;
+	padding: 16px 0;
 	box-sizing: border-box;
 
 	@include transition(all, 0.3s, ease-in-out);
 }
 
 .header-section {
-	background-color: var(--gb_header_bgcolor);
+	background-color: var(--gb_white);
 	z-index: 9;
 	width: 100%;
 	position: fixed;
@@ -128,8 +129,8 @@ header {
 
 .header-wrapper {
 	box-sizing: border-box;
-	width: 90%;
-	max-width: 1300px;
+	max-width: 1392px;
+	width: 98%;
 	margin: 0 auto;
 }
 
@@ -139,7 +140,6 @@ header {
 	display: flex;
 	align-items: center;
 }
-
 
 .hide-topbar {
 	header {

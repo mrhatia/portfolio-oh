@@ -42,9 +42,9 @@ class WP_Theme_Scripts {
 	public function theme_assets() {
 		// Enqueue theme styles.
 		BaseTheme::enqueue_style( 'assets/build/styles.min.css' );
-		if ( wp_is_mobile() ) {
-			BaseTheme::enqueue_style( 'assets/build/mobile.min.css' );
-		}
+		// if ( wp_is_mobile() ) {
+		// 	BaseTheme::enqueue_style( 'assets/build/mobile.min.css' );
+		// }
 		// Eliminate the emoji script.
 		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 		remove_action( 'wp_print_styles', 'print_emoji_styles' );

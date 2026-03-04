@@ -22,19 +22,23 @@
 	}
 
 	.member-image {
-
-		@include background-image("/admin/defaults/default-image.webp", center, cover, no-repeat, 310px, 100%);
+		@include background-image(
+			"/admin/defaults/default-image.webp",
+			center,
+			cover,
+			no-repeat,
+			310px,
+			100%
+		);
 	}
 
 	.member-name {
-
-		@include font(axi, bold);
+		@include font(cir, bold);
 		margin-bottom: 8px;
 	}
 
 	.designation {
-
-		@include font(axi, reg);
+		@include font(cir, med);
 
 		font-size: var(--gb_font_size_18);
 		margin-bottom: 0;
@@ -42,7 +46,6 @@
 }
 
 .black-container {
-
 	* {
 		color: var(--gb_white);
 	}
@@ -172,16 +175,14 @@
 	}
 
 	.member-name-popup {
-
-		@include font(axi, bold);
+		@include font(cir, bold);
 
 		color: var(--wp--preset--color--dark_text);
 		margin-bottom: 5px;
 	}
 
 	.member-designation {
-
-		@include font(axi, reg);
+		@include font(cir, med);
 
 		color: var(--wp--preset--color--lblack);
 		margin-bottom: 0;
@@ -205,7 +206,6 @@
 		}
 	}
 }
-
 
 .mfp-content {
 	text-align: center;

@@ -24,8 +24,7 @@ input[type="reset"] {
 	color: var(--gb_button_color);
 	outline: none;
 
-
-	@include font(axi, bold);
+	@include font(cir, bold);
 
 	font-size: var(--gb_font_size_16);
 	height: 50px;

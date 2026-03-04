@@ -27,7 +27,6 @@ get_header();
 		}
 	}
 	?>
-	<div class="ts-80"></div>
 	<!-- Content End -->
 </section>
 <?php get_footer(); ?>

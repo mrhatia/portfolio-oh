@@ -278,7 +278,7 @@ ul.list-none li {
 .learn-more {
 	color: var(--wp--preset--color--black);
 
-	@include font(axi, bold);
+	@include font(cir, bold);
 }
 
 /****
@@ -294,7 +294,7 @@ span.button,
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
-	padding: 8px 22px;
+	padding: 11px 56px 11px 30px;
 	text-decoration: none;
 	color: var(--gb_theme_btn_color);
 	background-color: var(--gb_theme_btn_bgcolor);
@@ -302,20 +302,23 @@ span.button,
 	transition: all 0.35s ease-in-out;
 	margin-right: 9px;
 	text-align: center;
-	border-radius: 0;
-	line-height: 1.5;
-	@include font(axi, bold);
-	font-size: var(--gb_font_size_16);
-
+	line-height: 1.2;
+	@include font(cir, med);
+	font-size: var(--gb_font_size_18);
+	background-image: url(../images/button-arrow.svg);
+	background-repeat: no-repeat;
+	background-size: 24px;
+	background-position: center right 23px;
+	border-radius: 100px;
+	letter-spacing: 0px;
 	&:last-child {
 		margin-right: 0;
 	}
 
 	&:hover,
 	&:focus-visible {
-		background-color: var(--gb_theme_btn_bgcolor_hover);
-		border: solid 2px var(--gb_theme_btn_border_color_hover);
-		color: var(--gb_theme_btn_color_hover);
+		background-color: var(--gb_color_secondary);
+		border: solid 2px var(--gb_color_secondary);
 	}
 
 	&.outline-btn {
@@ -323,7 +326,6 @@ span.button,
 		color: var(--gb_theme_btn_color_hover);
 	}
 }
-
 
 // Disabled Button
 
@@ -431,7 +433,6 @@ button[disabled]:hover {
 	}
 
 	.select-dropdown__button {
-
 		&:focus,
 		&:focus-visible {
 			outline-color: black !important;
@@ -456,7 +457,6 @@ picture {
 
 //Cookie style
 body {
-
 	#daextlwcnf-revisit-cookie-consent-container {
 		background-color: var(--gb_color_primary) !important;
 	}
@@ -488,7 +488,6 @@ body {
 
 		&:hover {
 			border-color: var(--gb_black_1) !important;
-
 		}
 	}
 }

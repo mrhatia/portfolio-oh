@@ -1,0 +1,38 @@
+.hero-landing {
+	display: flex;
+	align-items: center;
+}
+.hero-landing__content {
+	display: flex;
+	justify-content: flex-end;
+	width: 51.1%;
+	.hero-landing__content-inner {
+		max-width: 628px;
+		padding-right: 106px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	h1 {
+		letter-spacing: -1.9px;
+		line-height: 1.2;
+		mark {
+			display: block;
+			background-color: transparent;
+			color: var(--gb_color_primary);
+			padding: 0;
+		}
+	}
+	p {
+		max-width: 371px;
+		margin-bottom: 27px;
+	}
+}
+.hero-landing__image {
+	width: 48.96%;
+	float: right;
+	aspect-ratio: 705/768;
+	max-height: 768px;
+}
+.hero-landing-button {
+	line-height: 0.65;
+}
