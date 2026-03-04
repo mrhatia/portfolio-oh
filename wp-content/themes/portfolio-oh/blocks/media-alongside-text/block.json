@@ -1,7 +1,7 @@
 {
 	"name": "acf/media-alongside-text",
-	"title": "Media Alongside Text",
-	"description": "A custom Media Alongside Text block.",
+	"title": "Image Alongside Text",
+	"description": "A custom Image Alongside Text block.",
 	"category": "theme-blocks",
 	"icon": "iat",
 	"keywords": ["media-alongside-text"],

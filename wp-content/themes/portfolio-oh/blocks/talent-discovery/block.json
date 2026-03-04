@@ -1,0 +1,24 @@
+{
+	"name": "acf/talent-discovery",
+	"title": "Talent Discovery",
+	"description": "A custom Talent Discovery block.",
+	"category": "theme-blocks",
+	"icon": "iat",
+	"keywords": ["talent-discovery"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "block-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}
