@@ -152,39 +152,75 @@ jQuery( function() {
 	}
 
 	jQuery( function() {
-		const container = document.querySelector( '.tabs-ctn' );
-		if ( ! container ) {
+		const container = jQuery( '.tabs-ctn' );
+		if ( ! container.length ) {
 			return;
 		}
 
 		const tabs = jQuery( '.tab-item' );
 		const contents = jQuery( '.tab-item-content' );
 		const images = jQuery( '.tabs-image .tab-image' );
+
 		let currentIndex = 0;
 		let timer = null;
-		const delay = 5000;
+		const delay = 2800;
 		let isActive = false;
-		const isDesktop = jQuery( window ).width() > 1003;
 
-		function activate( index ) {
+		function resetAll() {
+			tabs.removeClass( 'current fill' );
+			tabs.find( '.dot' ).removeClass( 'dot-fill' );
+			images.removeClass( 'active exit-up' );
+			contents.stop( true, true ).slideUp( 0 );
+		}
+
+		function activate( index, click = false ) {
+			if ( ! click && index === currentIndex ) {
+				return;
+			}
+
 			const tab = tabs.eq( index );
 			const target = tab.data( 'tab-target' );
+			const currentImage = images.eq( currentIndex );
+			const nextImage = jQuery( target );
 
-			tabs.removeClass( 'current' );
-			contents.stop( true, true ).slideUp( 500 );
-			images.stop( true, true ).removeClass( 'current' ).hide();
+			nextImage.addClass( 'active' );
+			currentImage.addClass( 'exit-up' );
+
+			setTimeout( () => {
+				currentImage.removeClass( 'active exit-up' );
+			}, 600 );
+
 			tab.addClass( 'current' );
-			tab.find( '.tab-item-content' ).stop( true, true ).slideDown( 500 );
-			jQuery( target ).stop( true, true ).fadeIn( 400 ).addClass( 'current' );
+			tab.find( '.tab-item-content' ).stop( true, true ).slideDown( 400 );
+
+			tab.find( '.dot' ).removeClass( 'dot-fill' );
+			void tab.find( '.dot' )[ 0 ].offsetWidth;
+			tab.find( '.dot' ).addClass( 'dot-fill' );
+
+			if ( ! click && currentIndex !== index ) {
+				tabs.eq( currentIndex ).addClass( 'fill' );
+			}
+
+			currentIndex = index;
+
+			if ( ! click && currentIndex === tabs.length - 1 ) {
+				setTimeout( () => {
+					resetAll();
+					currentIndex = -1;
+					setTimeout( () => {
+						activate( 0 );
+					}, 50 );
+				}, delay );
+			}
 		}
 
 		function play() {
-			if ( ! isDesktop || timer || ! isActive ) {
+			if ( timer || ! isActive ) {
 				return;
 			}
-			timer = setInterval( function() {
-				currentIndex = ( currentIndex + 1 ) % tabs.length;
-				activate( currentIndex );
+			timer = setInterval( () => {
+				const next = ( currentIndex + 1 ) % tabs.length;
+				activate( next );
 			}, delay );
 		}
 
@@ -197,52 +233,30 @@ jQuery( function() {
 		}
 
 		tabs.on( 'click', function() {
-			currentIndex = tabs.index( this );
-			activate( currentIndex );
+			const newIndex = tabs.index( this );
+			resetAll();
+			activate( newIndex, true );
 			pause();
 			play();
 		} );
 
-		tabs.on( 'keydown', function( e ) {
-			if ( e.key === 'Enter' || e.key === ' ' ) {
-				e.preventDefault();
-				jQuery( this ).trigger( 'click' );
-			}
-		} );
+		const observer = new IntersectionObserver( ( entries ) => {
+			entries.forEach( ( entry ) => {
+				if ( entry.isIntersecting ) {
+					isActive = true;
+					play();
+				} else {
+					isActive = false;
+					pause();
+				}
+			} );
+		}, { threshold: 0.4 } );
 
-		const observer = new IntersectionObserver(
-			function( entries ) {
-				entries.forEach( function( entry ) {
-					if ( entry.isIntersecting ) {
-						isActive = true;
-						activate( currentIndex );
-						play();
-					} else {
-						isActive = false;
-						pause();
-					}
-				} );
-			},
-			{ threshold: 0.4 }
-		);
+		observer.observe( container[ 0 ] );
 
-		observer.observe( container );
-
-		if ( isDesktop ) {
-			const sectors = document.querySelectorAll( '.sector' );
-			if ( sectors.length ) {
-				const angle = 360 / sectors.length;
-				const skew = 90 - angle;
-				sectors.forEach( ( sector, i ) => {
-					sector.style.transform = `rotate(${ i * angle }deg) skew(${ skew }deg)`;
-				} );
-			}
-		} else {
-			tabs.removeClass( 'current' );
-			contents.hide();
-			tabs.eq( 0 ).addClass( 'current' );
-			tabs.eq( 0 ).find( '.tab-item-content' ).show();
-		}
+		images.eq( 0 ).addClass( 'active' );
+		tabs.eq( 0 ).addClass( 'current' );
+		tabs.eq( 0 ).find( '.dot' ).addClass( 'dot-fill' );
 	} );
 } );
 

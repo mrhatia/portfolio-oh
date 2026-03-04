@@ -2155,6 +2155,9 @@ Mixin for transition
   /*-------------------------------------------------
   >> Basic styles for Testimonial Block
   -------------------------------------------------*/
+  /*-------------------------------------------------
+  >> Basic styles for Tabbed Content Block
+  -------------------------------------------------*/
   /* Forms */
   /* -------------------------------------------------
   >> Styles for form fields
@@ -3231,6 +3234,152 @@ Mixin for transition
   color: var(--gb_black);
   font-style: italic;
   letter-spacing: -0.2px;
+}
+.acf-block-preview .tabs-ctn .section-head {
+  max-width: 461px;
+  margin: 0 auto;
+}
+.acf-block-preview .tabs-ctn .section-head .heading-1 {
+  margin: 0;
+  letter-spacing: -1.7px;
+  text-align: center;
+  line-height: 1.2;
+}
+.acf-block-preview .tabs-iat-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.acf-block-preview .tabs-content {
+  width: 21%;
+  padding-top: 25px;
+  box-sizing: border-box;
+}
+.acf-block-preview .tabs-content .heading-2 {
+  margin-bottom: 40px;
+}
+.acf-block-preview .tab-item-title {
+  margin-bottom: 0px;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: "Circular Std", arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -0.3px;
+  color: #b0b0b1;
+}
+.acf-block-preview .tab-item-content {
+  padding-top: 11px;
+  padding-left: 46px;
+  display: none;
+  margin-bottom: 0;
+}
+.acf-block-preview .tab-item-content p {
+  line-height: 1.4;
+}
+.acf-block-preview .tab-item-content p:last-of-type {
+  margin: 0;
+}
+.acf-block-preview .tabs-ctn-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 64px;
+}
+.acf-block-preview .tabs-right-text {
+  width: 21.2%;
+  padding-top: 24px;
+  box-sizing: border-box;
+}
+.acf-block-preview .tabs-right-text p {
+  margin-bottom: 24px;
+}
+.acf-block-preview .tabs-right-text-button {
+  line-height: 0.65;
+}
+.acf-block-preview .tabs-image {
+  width: 40.04%;
+  position: relative;
+  overflow: hidden;
+  height: 347px;
+  outline: 4.52656px solid #000;
+  box-shadow: -45.2656px 40.739px 76.9515px 9.05312px rgba(0, 0, 0, 0.11);
+  border-radius: 8px;
+}
+.acf-block-preview .tabs-image .tab-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(0);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.18, 1), opacity 0.6s ease;
+  z-index: 1;
+}
+.acf-block-preview .tabs-image .tab-image.active {
+  opacity: 1;
+  z-index: 2;
+}
+.acf-block-preview .tabs-image .tab-image.exit-up {
+  transform: translateY(-100%);
+  z-index: 3;
+}
+.acf-block-preview .tab-item {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 0;
+  padding: 0 16px 24px 30px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+.acf-block-preview .tab-item:last-of-type::before, .acf-block-preview .tab-item:last-of-type::after {
+  background-color: transparent;
+}
+.acf-block-preview .tab-item .dot {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  border: 2px solid #fff;
+}
+.acf-block-preview .tab-item .dot.dot-fill {
+  background-color: var(--gb_color_primary);
+  transition: background 0.4s ease;
+}
+.acf-block-preview .tab-item::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 7px;
+  width: 2px;
+  height: 100%;
+  background: #d9d9d9;
+}
+.acf-block-preview .tab-item::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 7px;
+  width: 2px;
+  height: 0%;
+  background: var(--gb_color_primary);
+  opacity: 0;
+  transition: height 1.2s linear, opacity 0.2s ease;
+}
+.acf-block-preview .tab-item.current::after {
+  height: 100%;
+  opacity: 1;
+}
+.acf-block-preview .tab-item.fill::after {
+  height: 100%;
+  opacity: 1;
+  transition: none;
 }
 .acf-block-preview form {
   margin: 0 0 20px;
