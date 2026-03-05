@@ -2158,6 +2158,9 @@ Mixin for transition
   /*-------------------------------------------------
   >> Basic styles for Tabbed Content Block
   -------------------------------------------------*/
+  /*-------------------------------------------------
+  >> Basic styles for Process Tabs Block
+  -------------------------------------------------*/
   /* Forms */
   /* -------------------------------------------------
   >> Styles for form fields
@@ -3399,6 +3402,85 @@ Mixin for transition
   height: 100%;
   opacity: 1;
   transition: none;
+}
+.acf-block-preview .process-tabs {
+  background-color: var(--gb_gray_2);
+  padding: 40px;
+  box-sizing: border-box;
+  border-radius: 24px;
+}
+.acf-block-preview .process-tabs-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+.acf-block-preview .process-steps {
+  width: 52.9%;
+  padding: 16px 24px;
+  box-sizing: border-box;
+}
+.acf-block-preview .process-steps h2.heading-1 {
+  letter-spacing: -1.6px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+.acf-block-preview .process-steps P {
+  margin-bottom: 34px;
+}
+.acf-block-preview .process-step-button {
+  line-height: 0.65;
+  margin-top: 45px;
+}
+.acf-block-preview .process-step-title {
+  font-size: var(--gb_font_size_20);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC44Ij4KPHBhdGggZD0iTTUgMTJIMThNMTMgNkwxOC4yOTI5IDExLjI5MjlDMTguNjgzNCAxMS42ODM0IDE4LjY4MzQgMTIuMzE2NiAxOC4yOTI5IDEyLjcwNzFMMTMgMTgiIHN0cm9rZT0iI0Q4NDQ0MSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9nPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 0px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.acf-block-preview .process-step.current .process-step-title {
+  padding-right: 42px;
+  color: var(--gb_color_primary);
+  background-size: 24px;
+}
+.acf-block-preview .process-images {
+  width: 46.1%;
+  position: relative;
+  overflow: hidden;
+  height: 529px;
+  border-radius: 24px;
+}
+.acf-block-preview .process-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  aspect-ratio: 527/529;
+  transform: translateY(100%);
+  transition: transform 0.7s cubic-bezier(0.77, 0, 0.18, 1);
+  z-index: 1;
+  height: 529px;
+}
+.acf-block-preview .process-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 24px;
+  aspect-ratio: 527/529;
+}
+.acf-block-preview .process-image.active {
+  transform: translateY(0);
+  z-index: 3;
+}
+.acf-block-preview .process-image.exit-up {
+  transform: translateY(-100%);
+  z-index: 2;
 }
 .acf-block-preview form {
   margin: 0 0 20px;
