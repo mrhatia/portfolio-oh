@@ -60,7 +60,7 @@ BaseTheme::block(
 											$main_image   = $tab['image'] ?? null;
 											$tab_class    = 'tab-' . sanitize_title( $label );
 											?>
-												<div class="tab-image image-cover <?php echo esc_attr( $tab_class ); ?> <?php echo $index === 0 ? '' : 'current'; ?>" style="">
+												<div class="tab-image image-cover <?php echo esc_attr( $tab_class ); ?> <?php echo $index === 0 ? '' : ''; ?>" style="">
 													<?php if ( $main_image ) { ?>
 														<?php BaseTheme::the_attachment_image( $main_image, 500 ); ?>
 													<?php } ?>
