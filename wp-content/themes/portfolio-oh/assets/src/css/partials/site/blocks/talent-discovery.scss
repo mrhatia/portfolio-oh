@@ -20,7 +20,7 @@
 			width: 56%;
 		}
 
-		.process-image {
+		.process-image_tlnt {
 			width: 43%;
 			position: absolute;
 			bottom: 0;
@@ -86,11 +86,27 @@
 	// 		}
 	// 	}
 
-	// 	.process-image {
+	// 	.process-image_tlnt {
 	// 		width: 300px;
 	// 		height: auto;
 	// 		border-radius: 10px;
 	// 		object-fit: cover;
 	// 	}
 	// }
+}
+
+
+.talent-discovery-section {
+	.section-head {
+		max-width: 850px;
+
+		.heading-1 {
+			line-height: 1.2;
+			letter-spacing: -1.7px;
+		}
+
+		p {
+			font-size: 16px;
+		}
+	}
 }

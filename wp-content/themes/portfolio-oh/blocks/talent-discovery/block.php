@@ -76,7 +76,7 @@ BaseTheme::block(
 								</div>
 
 								<?php if ( $bst_var_image ) { ?>
-									<div class="process-image">
+									<div class="process-image_tlnt">
 										<?php BaseTheme::the_attachment_image( $bst_var_image, 1000 ); ?>
 									</div>
 								<?php } ?>

@@ -5083,6 +5083,36 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   margin-bottom: 24px;
 }
 
+.blue-bg-variation .wrapper {
+  background-color: var(--gb_lgray);
+  padding: 52px 60px;
+  border-radius: 24px;
+  box-sizing: border-box;
+}
+.blue-bg-variation .iat-section {
+  border-radius: 20px;
+}
+.blue-bg-variation .iat-image {
+  width: 55.3%;
+}
+.blue-bg-variation .iat-text {
+  width: 38.9%;
+  padding-right: 54px;
+  box-sizing: border-box;
+  margin-top: 6px;
+}
+.blue-bg-variation .iat-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  margin-bottom: 38px;
+}
+.blue-bg-variation .iat-text .heading-1 {
+  letter-spacing: -1.8px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
 .big-image-variation {
   position: relative;
   padding-bottom: 50px;
@@ -5147,6 +5177,11 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .perk-item {
   border-radius: 12px;
   box-sizing: border-box;
+}
+.perk-item:not(:nth-child(1)) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .perk-item .perk-title {
   font-size: var(--gb_font_size_34);
@@ -5465,7 +5500,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .process-list .box-left .process-content {
   width: 56%;
 }
-.process-list .box-left .process-image {
+.process-list .box-left .process-image_tlnt {
   width: 43%;
   position: absolute;
   bottom: 0;
@@ -5497,6 +5532,17 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 .process-list .box-right p {
   font-size: var(--gb_font_size_16);
+}
+
+.talent-discovery-section .section-head {
+  max-width: 850px;
+}
+.talent-discovery-section .section-head .heading-1 {
+  line-height: 1.2;
+  letter-spacing: -1.7px;
+}
+.talent-discovery-section .section-head p {
+  font-size: 16px;
 }
 
 /*-------------------------------------------------

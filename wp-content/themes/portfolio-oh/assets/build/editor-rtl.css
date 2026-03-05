@@ -3101,6 +3101,35 @@ Mixin for transition
   line-height: 1.2;
   margin-bottom: 24px;
 }
+.acf-block-preview .blue-bg-variation .wrapper {
+  background-color: var(--gb_lgray);
+  padding: 52px 60px;
+  border-radius: 24px;
+  box-sizing: border-box;
+}
+.acf-block-preview .blue-bg-variation .iat-section {
+  border-radius: 20px;
+}
+.acf-block-preview .blue-bg-variation .iat-image {
+  width: 55.3%;
+}
+.acf-block-preview .blue-bg-variation .iat-text {
+  width: 38.9%;
+  padding-left: 54px;
+  box-sizing: border-box;
+  margin-top: 6px;
+}
+.acf-block-preview .blue-bg-variation .iat-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  margin-bottom: 38px;
+}
+.acf-block-preview .blue-bg-variation .iat-text .heading-1 {
+  letter-spacing: -1.8px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
 .acf-block-preview .big-image-variation {
   position: relative;
   padding-bottom: 50px;
@@ -3157,6 +3186,11 @@ Mixin for transition
 .acf-block-preview .perk-item {
   border-radius: 12px;
   box-sizing: border-box;
+}
+.acf-block-preview .perk-item:not(:nth-child(1)) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .acf-block-preview .perk-item .perk-title {
   font-size: var(--gb_font_size_34);
@@ -3451,7 +3485,7 @@ Mixin for transition
 .acf-block-preview .process-list .box-left .process-content {
   width: 56%;
 }
-.acf-block-preview .process-list .box-left .process-image {
+.acf-block-preview .process-list .box-left .process-image_tlnt {
   width: 43%;
   position: absolute;
   bottom: 0;
@@ -3483,6 +3517,16 @@ Mixin for transition
 }
 .acf-block-preview .process-list .box-right p {
   font-size: var(--gb_font_size_16);
+}
+.acf-block-preview .talent-discovery-section .section-head {
+  max-width: 850px;
+}
+.acf-block-preview .talent-discovery-section .section-head .heading-1 {
+  line-height: 1.2;
+  letter-spacing: -1.7px;
+}
+.acf-block-preview .talent-discovery-section .section-head p {
+  font-size: 16px;
 }
 .acf-block-preview .process-tabs {
   background-color: var(--gb_gray_2);
