@@ -84,7 +84,7 @@ export default function Edit( props ) {
 							DesignKey="bgDesignType"
 							help="Click to select value"
 							options={ [
-								{ label: 'Container Red', value: 'ctn-red', display: '#ff0000' },
+								{ label: 'Container Navy', value: 'ctn-navy', display: '#062233' },
 								{ label: 'Container Black', value: 'ctn-black', display: 'ctn-black.png' },
 								{ label: 'Container Sea Green', value: 'ctn-sea-green', display: 'ctn-sea-green.png' },
 							] }

@@ -12,6 +12,7 @@ body {
 	color: var(--gb_body_color);
 	background-color: var(--gb_body_bg);
 	line-height: 1.4;
+	overflow-x: hidden;
 
 	&.have-topbar {
 		padding-top: var(--gb_header-height);
@@ -30,6 +31,7 @@ p {
 strong {
 	color: var(--gb_text_strong) !important;
 }
+
 .main-section {
 	padding-top: 80px;
 }
