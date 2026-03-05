@@ -3366,9 +3366,6 @@ Mixin for transition
   margin: 0;
 }
 .acf-block-preview .tabs-ctn-inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   margin-top: 64px;
 }
 .acf-block-preview .tabs-right-text {
