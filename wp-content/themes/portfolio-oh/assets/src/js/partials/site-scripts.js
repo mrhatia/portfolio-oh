@@ -150,113 +150,200 @@ jQuery( function() {
 			}
 		} );
 	}
-
-	jQuery( function() {
-		const container = jQuery( '.tabs-ctn' );
-		if ( ! container.length ) {
-			return;
-		}
-
-		const tabs = jQuery( '.tab-item' );
-		const contents = jQuery( '.tab-item-content' );
-		const images = jQuery( '.tabs-image .tab-image' );
-
-		let currentIndex = 0;
-		let timer = null;
-		const delay = 2800;
-		let isActive = false;
-
-		function resetAll() {
-			tabs.removeClass( 'current fill' );
-			tabs.find( '.dot' ).removeClass( 'dot-fill' );
-			images.removeClass( 'active exit-up' );
-			contents.stop( true, true ).slideUp( 0 );
-		}
-
-		function activate( index, click = false ) {
-			if ( ! click && index === currentIndex ) {
+	// Tabs
+	if ( jQuery( '.tabs-ctn' ).length ) {
+		jQuery( function() {
+			const container = jQuery( '.tabs-ctn' );
+			if ( ! container.length ) {
 				return;
 			}
 
-			const tab = tabs.eq( index );
-			const target = tab.data( 'tab-target' );
-			const currentImage = images.eq( currentIndex );
-			const nextImage = jQuery( target );
+			const tabs = jQuery( '.tab-item' );
+			const contents = jQuery( '.tab-item-content' );
+			const images = jQuery( '.tabs-image .tab-image' );
 
-			nextImage.addClass( 'active' );
-			currentImage.addClass( 'exit-up' );
+			let currentIndex = 0;
+			let timer = null;
+			const delay = 2800;
+			let isActive = false;
 
-			setTimeout( () => {
-				currentImage.removeClass( 'active exit-up' );
-			}, 600 );
-
-			tab.addClass( 'current' );
-			tab.find( '.tab-item-content' ).stop( true, true ).slideDown( 400 );
-
-			tab.find( '.dot' ).removeClass( 'dot-fill' );
-			void tab.find( '.dot' )[ 0 ].offsetWidth;
-			tab.find( '.dot' ).addClass( 'dot-fill' );
-
-			if ( ! click && currentIndex !== index ) {
-				tabs.eq( currentIndex ).addClass( 'fill' );
+			function resetAll() {
+				tabs.removeClass( 'current fill' );
+				tabs.find( '.dot' ).removeClass( 'dot-fill' );
+				images.removeClass( 'active exit-up' );
+				contents.stop( true, true ).slideUp( 0 );
 			}
 
-			currentIndex = index;
+			function activate( index, click = false ) {
+				if ( ! click && index === currentIndex ) {
+					return;
+				}
 
-			if ( ! click && currentIndex === tabs.length - 1 ) {
+				const tab = tabs.eq( index );
+				const target = tab.data( 'tab-target' );
+				const currentImage = images.eq( currentIndex );
+				const nextImage = jQuery( target );
+
+				nextImage.addClass( 'active' );
+				currentImage.addClass( 'exit-up' );
+
 				setTimeout( () => {
-					resetAll();
-					currentIndex = -1;
+					currentImage.removeClass( 'active exit-up' );
+				}, 600 );
+
+				tab.addClass( 'current' );
+				tab.find( '.tab-item-content' ).stop( true, true ).slideDown( 400 );
+
+				tab.find( '.dot' ).removeClass( 'dot-fill' );
+				void tab.find( '.dot' )[ 0 ].offsetWidth;
+				tab.find( '.dot' ).addClass( 'dot-fill' );
+
+				if ( ! click && currentIndex !== index ) {
+					tabs.eq( currentIndex ).addClass( 'fill' );
+				}
+
+				currentIndex = index;
+
+				if ( ! click && currentIndex === tabs.length - 1 ) {
 					setTimeout( () => {
-						activate( 0 );
-					}, 50 );
+						resetAll();
+						currentIndex = -1;
+						setTimeout( () => {
+							activate( 0 );
+						}, 50 );
+					}, delay );
+				}
+			}
+
+			function play() {
+				if ( timer || ! isActive ) {
+					return;
+				}
+				timer = setInterval( () => {
+					const next = ( currentIndex + 1 ) % tabs.length;
+					activate( next );
 				}, delay );
 			}
-		}
 
-		function play() {
-			if ( timer || ! isActive ) {
-				return;
-			}
-			timer = setInterval( () => {
-				const next = ( currentIndex + 1 ) % tabs.length;
-				activate( next );
-			}, delay );
-		}
-
-		function pause() {
-			if ( ! timer ) {
-				return;
-			}
-			clearInterval( timer );
-			timer = null;
-		}
-
-		tabs.on( 'click', function() {
-			const newIndex = tabs.index( this );
-			resetAll();
-			activate( newIndex, true );
-			pause();
-			play();
-		} );
-
-		const observer = new IntersectionObserver( ( entries ) => {
-			entries.forEach( ( entry ) => {
-				if ( entry.isIntersecting ) {
-					isActive = true;
-					play();
-				} else {
-					isActive = false;
-					pause();
+			function pause() {
+				if ( ! timer ) {
+					return;
 				}
+				clearInterval( timer );
+				timer = null;
+			}
+
+			tabs.on( 'click', function() {
+				const newIndex = tabs.index( this );
+				resetAll();
+				activate( newIndex, true );
+				pause();
+				play();
 			} );
-		}, { threshold: 0.4 } );
 
-		observer.observe( container[ 0 ] );
+			const observer = new IntersectionObserver( ( entries ) => {
+				entries.forEach( ( entry ) => {
+					if ( entry.isIntersecting ) {
+						isActive = true;
+						play();
+					} else {
+						isActive = false;
+						pause();
+					}
+				} );
+			}, { threshold: 0.4 } );
 
-		images.eq( 0 ).addClass( 'active' );
-		tabs.eq( 0 ).addClass( 'current' );
-		tabs.eq( 0 ).find( '.dot' ).addClass( 'dot-fill' );
-	} );
+			observer.observe( container[ 0 ] );
+
+			images.eq( 0 ).addClass( 'active' );
+			tabs.eq( 0 ).addClass( 'current' );
+			tabs.eq( 0 ).find( '.dot' ).addClass( 'dot-fill' );
+		} );
+	}// Process Tabs
+	if ( jQuery( '.process-tabs' ).length ) {
+		jQuery( function() {
+			const container = jQuery( '.process-tabs' );
+			if ( ! container.length ) {
+				return;
+			}
+
+			const steps = jQuery( '.process-step' );
+			const images = jQuery( '.process-image' );
+
+			let currentIndex = 0;
+			let timer = null;
+			const delay = 5000;
+			let isActive = false;
+			const isDesktop = jQuery( window ).width() > 1003;
+
+			function resetClasses() {
+				steps.removeClass( 'current fill' );
+				steps.find( '.dot' ).removeClass( 'dot-fill' );
+				images.removeClass( 'active exit-up' );
+			}
+
+			function activate( index ) {
+				const step = steps.eq( index );
+				const target = step.data( 'step-target' );
+				const currentImage = images.eq( currentIndex );
+				const nextImage = jQuery( target );
+
+				currentImage.removeClass( 'active' ).addClass( 'exit-up' );
+				nextImage.addClass( 'active' );
+
+				steps.removeClass( 'current' );
+				step.addClass( 'current fill' );
+				step.find( '.dot' ).addClass( 'dot-fill' );
+
+				currentIndex = index;
+			}
+
+			function loop() {
+				if ( ! isDesktop || timer || ! isActive ) {
+					return;
+				}
+				timer = setInterval( function() {
+					const next = ( currentIndex + 1 ) % steps.length;
+					resetClasses();
+					activate( next );
+				}, delay );
+			}
+
+			function stopLoop() {
+				if ( ! timer ) {
+					return;
+				}
+				clearInterval( timer );
+				timer = null;
+			}
+
+			steps.on( 'click', function() {
+				const newIndex = steps.index( this );
+				resetClasses();
+				activate( newIndex );
+				stopLoop();
+				loop();
+			} );
+
+			const observer = new IntersectionObserver( function( entries ) {
+				entries.forEach( function( entry ) {
+					if ( entry.isIntersecting ) {
+						isActive = true;
+						loop();
+					} else {
+						isActive = false;
+						stopLoop();
+					}
+				} );
+			}, { threshold: 0.4 } );
+
+			observer.observe( container[ 0 ] );
+
+			resetClasses();
+			images.eq( 0 ).addClass( 'active' );
+			steps.eq( 0 ).addClass( 'current fill' );
+			steps.eq( 0 ).find( '.dot' ).addClass( 'dot-fill' );
+		} );
+	}
 } );
 
