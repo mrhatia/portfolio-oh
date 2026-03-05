@@ -50,7 +50,7 @@ BaseTheme::block(
 									$label     = $tab['label'] ?? '';
 									$tab_class = 'tab-' . sanitize_title( $label );
 									?>
-									<div class="process-step" data-tab-target=".<?php echo esc_attr( $tab_class ); ?>">
+									<div class="process-step" data-step-target=".<?php echo esc_attr( $tab_class ); ?>">
 										<div class="process-step-head">
 											<h3 class="process-step-title" role="button" tabindex="0">
 												<?php echo esc_html( $label ); ?>

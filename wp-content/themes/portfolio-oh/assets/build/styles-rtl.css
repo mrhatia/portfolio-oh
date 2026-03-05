@@ -5341,9 +5341,6 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 
 .tabs-ctn-inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   margin-top: 64px;
 }
 
